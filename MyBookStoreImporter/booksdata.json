@@ -1,0 +1,107 @@
+[
+  {
+    "Title": "Fundamentals of Wavelets",
+    "Author": {
+      "Name": "Jaideva Goswami",
+      "Birth": "07-12-1978",
+      "Bio": "He is a very good writer. He is talented."
+    },
+    "Genre": "tech",
+    "SubGenre": "signal_processing",
+    "Height": 228,
+    "Price": 20.20,
+    "Publisher": {
+      "Name": "Wiley",
+      "Bio": "John Wiley & Sons, Inc., commonly known as Wiley (/ˈwaɪli/), is an American multinational publishing company founded in 1807 that focuses on academic publishing and instructional materials. The company produces books, journals, and encyclopedias, in print and electronically, as well as online products and services, training materials, and educational materials for undergraduate, graduate, and continuing education students.",
+      "Established": "17-03-1807",
+      "Image": "https://en.wikipedia.org/wiki/Wiley_(publisher)#/media/File:Wiley_logo.svg"
+    },
+    "CoverImage": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg",
+    "Quantity": 50,
+    "PublicationDate": "07-12-1978"
+  },
+  {
+    "Title": "Data Smart",
+    "Author": {
+      "Name": "John Foreman",
+      "Birth": "01-02-1987",
+      "Bio": "He is a very good writer."
+    },
+    "Genre": "tech",
+    "SubGenre": "data_science",
+    "Height": 235,
+    "Price": 30.20,
+    "Publisher": {
+      "Name": "Wiley",
+      "Bio": "John Wiley & Sons, Inc., commonly known as Wiley (/ˈwaɪli/), is an American multinational publishing company founded in 1807 that focuses on academic publishing and instructional materials. The company produces books, journals, and encyclopedias, in print and electronically, as well as online products and services, training materials, and educational materials for undergraduate, graduate, and continuing education students.",
+      "Established": "17-03-1807",
+      "Image": "https://en.wikipedia.org/wiki/Wiley_(publisher)#/media/File:Wiley_logo.svg"
+    },
+    "CoverImage": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson2.jpg",
+    "Quantity": 40,
+    "PublicationDate": "01-02-1987"
+  },
+  {
+    "Title": "God Created the Integers",
+    "Author": {
+      "Name": "Jaideva Goswami",
+      "Birth": "17-02-1962",
+      "Bio": "He is a very good writer. He is talented. He is older."
+    },
+    "Genre": "tech",
+    "SubGenre": "mathematics",
+    "Height": 197,
+    "Price": 40.20,
+    "Publisher": {
+      "Name": "Penguin",
+      "Bio": "Penguin Books is a British publishing house. It was co-founded in 1935 by Allen Lane with his brothers Richard and John, as a line of the publishers The Bodley Head, only becoming a separate company the following year. Penguin revolutionised publishing in the 1930s through its inexpensive paperbacks, sold through Woolworths and other stores for sixpence, bringing high-quality fiction and non-fiction to the mass market. Its success showed that large audiences existed for serious books. It also affected modern British popular culture significantly through its books concerning politics, the arts, and science.",
+      "Established": "05-03-1935",
+      "Image": "https://en.wikipedia.org/wiki/Penguin_Books#/media/File:Penguin_logo.svg"
+    },
+    "CoverImage": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/adzic.jpg",
+    "Quantity": 30,
+    "PublicationDate": "17-02-1962"
+  },
+  {
+    "Title": "Superfreakonomics",
+    "Author": {
+      "Name": "Stephen Dubner",
+      "Birth": "22-07-2001",
+      "Bio": "He is young."
+    },
+    "Genre": "science",
+    "SubGenre": "economics",
+    "Height": 179,
+    "Price": 50.20,
+    "Publisher": {
+      "Name": "HarperCollins",
+      "Bio": "HarperCollins Publishers LLC is one of the Big Five English-language book publishing companies; the other four include Penguin Random House, Simon & Schuster, Hachette, and Macmillan. HarperCollins is headquartered in New York City and is a subsidiary of NewsCorp. The company's name is derived from a combination of the firm's predecessors. Harper & Brothers, founded in 1817, merged with Row, Peterson & Company in 1962 to form Harper & Row, which was acquired by NewsCorp in 1987. The Scottish publishing company William Collins, Sons, founded in 1819, was acquired by NewsCorp in 1989 and merged with Harper & Row to form HarperCollins. The logo for the firm combines the fire from Harper's torch and the water from Collins' fountain.",
+      "Established": "25-09-1989",
+      "Image": "https://www.stm-publishing.com/wp-content/uploads/2011/11/harper.png"
+    },
+    "CoverImage": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ahmed.jpg",
+    "Quantity": 20,
+    "PublicationDate": "22-07-2001"
+  },
+  {
+    "Title": "Orientalism",
+    "Author": {
+      "Name": "Edward Said",
+      "Birth": "18-04-1899",
+      "Bio": "He is the writer of one of the best books in the world."
+    },
+    "Genre": "nonfiction",
+    "SubGenre": "history",
+    "Height": 197,
+    "Price": 60.20,
+    "Publisher": {
+      "Name": "Penguin",
+      "Bio": "Penguin Books is a British publishing house. It was co-founded in 1935 by Allen Lane with his brothers Richard and John, as a line of the publishers The Bodley Head, only becoming a separate company the following year. Penguin revolutionised publishing in the 1930s through its inexpensive paperbacks, sold through Woolworths and other stores for sixpence, bringing high-quality fiction and non-fiction to the mass market. Its success showed that large audiences existed for serious books. It also affected modern British popular culture significantly through its books concerning politics, the arts, and science.",
+      "Established": "05-03-1935",
+      "Image": "https://en.wikipedia.org/wiki/Penguin_Books#/media/File:Penguin_logo.svg"
+    },
+    "CoverImage": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/allen.jpg",
+    "Quantity": 10,
+    "PublicationDate": "18-04-1899"
+  }
+]

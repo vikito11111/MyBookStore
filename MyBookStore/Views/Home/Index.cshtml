@@ -1,0 +1,67 @@
+﻿@model MyBookStore.ViewModels.Home.IndexViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <h1 class="text-center">Welcome to the Book Store</h1>
+
+    <!-- Section function to display books -->
+    @foreach (var bookSection in new[] { ("Most Recently Added Books:", Model.NewestBooks) })
+    {
+        <h2 class="section-title">@bookSection.Item1</h2>
+        <div class="row">
+            @foreach (var book in bookSection.Item2)
+            {
+                <div class="col-md-6">
+                    <div class="card book-card mb-4">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img class="book-image" src="@book.CoverImage" alt="Book cover image">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h5 class="card-title">@book.Title</h5>
+                                    <table class="table table-borderless book-info">
+                                        <tr><td>Author:</td><td>@book.Author?.Name</td></tr>
+                                        <tr><td>Published:</td><td>@book.PublicationDate.ToString("d")</td></tr>
+                                        <tr><td>Genre:</td><td>@book.Genre?.Name</td></tr>
+                                        <tr><td>Price:</td><td>$@book.Price</td></tr>
+                                    </table>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.href='@Url.Action("ViewBook", "Book", new { id = book.Id })'">View</button>
+                                    <a href="@Url.Action("BuyBook", "Book", new { id = book.Id })" class="btn btn-primary">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+<style>
+    .section-title {
+        color: #333;
+        margin-top: 30px;
+    }
+
+    .book-card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .book-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .book-info td {
+        padding: 0;
+    }
+</style>
+

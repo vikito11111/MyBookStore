@@ -1,0 +1,65 @@
+﻿@model MyBookStore.ViewModels.Search.SearchViewModel
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.ErrorMessage
+    </div>
+}
+
+<h2>Search Books</h2>
+<form asp-action="Index" method="post" class="search-form">
+    <div class="input-group">
+        <input type="text" asp-for="Query" placeholder="Search Query" required class="search-input" />
+        <select asp-for="SearchType" class="search-select">
+            <option value="Title">Title</option>
+            <option value="Genre">Genre</option>
+            <option value="Author">Author</option>
+        </select>
+        <button type="submit" class="search-button">Search</button>
+    </div>
+</form>
+
+<style>
+    .search-form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 15px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+    }
+
+    .input-group {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .search-select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-left: none;
+        border-right: none;
+    }
+
+    .search-button {
+        padding: 10px 20px;
+        border: 1px solid #ccc;
+        background-color: #007bff;
+        color: #ffffff;
+        border-radius: 0 3px 3px 0;
+        cursor: pointer;
+    }
+
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+</style>
+

@@ -1,0 +1,70 @@
+﻿@model List<Book>
+
+<h2 class="results-title">Search Results</h2>
+
+<a href="@Url.Action("Index", "Search")" style="font-size: 16px; color: #007bff; text-decoration: none; border: 2px solid #007bff; padding: 8px 12px; border-radius: 4px; display: inline-block;">
+    <i class="fas fa-arrow-left"></i> Back
+</a>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+<div class="container">
+    <div class="row">
+        @foreach (var book in Model)
+        {
+            <div class="col-md-4">
+                <div class="card book-card mb-4">
+                    <img class="card-img-top book-image" src="@book.CoverImage" alt="Book cover image">
+                    <div class="card-body">
+                        <h5 class="card-title">@book.Title</h5>
+                        <p class="card-text">Author: @(book.Author?.Name ?? "Unknown Author")</p>
+                        <p class="card-text">Genre: @book.Genre.Name</p>
+                        <p class="card-text">Publisher: @(book.Publisher?.Name ?? "Unknown Publisher")</p>
+                        <p class="card-text">Pages: @book.Height</p>
+                        <p class="card-text">Price: $@book.Price</p>
+                        <a href="@Url.Action("ViewBook", "Book", new { id = book.Id })" class="btn btn-secondary">View</a>
+                        <a href="@Url.Action("BuyBook", "Book", new { id = book.Id })" class="btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .results-title {
+        color: #333;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .back-button {
+        text-align: left;
+        margin: 10px;
+    }
+
+    .book-card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    .book-image {
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .card-title {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .card-text {
+        margin-bottom: 10px;
+    }
+</style>
+

@@ -1,0 +1,20 @@
+﻿.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.h2custom {
+    text-align: center;
+}
+
+.pcustom {
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+

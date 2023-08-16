@@ -1,0 +1,32 @@
+﻿@model MyBookStore.ViewModels.Admin.AddGenreViewModel
+
+<style>
+    .label-decor {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333333;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h3>Add Genre</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="AddGenre" method="post">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group">
+                            <label for="Name" class="label-decor">Name:</label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3 mb-2" style="background-color: blue;">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
