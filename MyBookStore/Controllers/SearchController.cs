@@ -3,55 +3,38 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyBookStore.Data;
 using MyBookStore.Models;
+using MyBookStore.Services.Books;
 using MyBookStore.ViewModels.Search;
 
 namespace MyBookStore.Controllers
 {
     public class SearchController : Controller
     {
-        private readonly MyBookStoreDbContext db;
+        private readonly IBookService _bookService;
+        private readonly MyBookStoreDbContext _context;
 
-        public SearchController(MyBookStoreDbContext db)
+        public SearchController(IBookService bookService, MyBookStoreDbContext context)
         {
-            this.db = db;
+            _context = context;
+            _bookService = bookService;
         }
 
-        //[Authorize]
+        [Authorize]
         public IActionResult Index()
         {
             return View();
         }
 
         [HttpPost]
-        //[Authorize]
-        public IActionResult Index(SearchViewModel model)
+        [Authorize]
+        public IActionResult Index(SearchViewModel searchModel)
         {
-            IQueryable<Book> books = db.Books
-                .Include(a => a.Author)
-                .Include(a => a.Genre)
-                .Include(a => a.Publisher)
-                .AsQueryable();
-
-            switch (model.SearchType)
-            {
-                case "Title":
-                    books = books.Where(b => b.Title.Contains(model.Query));
-                    break;
-                case "Genre":
-                    books = books.Where(b => b.Genre.Name.Contains(model.Query));
-                    break;
-                case "Author":
-                    books = books.Where(b => b.Author.Name.Contains(model.Query));
-                    break;
-            }
-
-            var resultBooks = books.ToList();
+            var resultBooks = _bookService.SearchBooks(searchModel);
 
             if (resultBooks.Count == 0)
             {
-                // Handle the case when no results are found
                 ViewBag.ErrorMessage = "No books found matching your search criteria.";
-                return View("Index"); // or return another view if you want
+                return View("Index");
             }
 
             return View("Results", resultBooks);

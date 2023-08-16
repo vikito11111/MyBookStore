@@ -1,77 +1,89 @@
 ﻿@model MyBookStore.ViewModels.Admin.AddNewBookViewModel
 
-@{
-    ViewData["Title"] = "Add New Book";
-}
-
-<h2>@ViewData["Title"]</h2>
-
-<form asp-action="AddNewBook" method="post" enctype="multipart/form-data">
-    <div class="form-group">
-        <label asp-for="Title">Title</label>
-        <input asp-for="Title" class="form-control" />
-        <span asp-validation-for="Title" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="AuthorId">Author</label>
-        @Html.DropDownListFor(model => model.AuthorId, Model.Authors, "Select an Author", new { @class = "form-control" })
-        <span asp-validation-for="AuthorId" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="PublisherId">Publisher</label>
-        @Html.DropDownListFor(model => model.PublisherId, Model.Publishers, "Select a Publisher", new { @class = "form-control" })
-        <span asp-validation-for="PublisherId" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="GenreId">Genre</label>
-        @Html.DropDownListFor(model => model.GenreId, Model.Genres, "Select a Genre", new { @class = "form-control" })
-        <span asp-validation-for="GenreId" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="SubGenreId">SubGenre</label>
-        @Html.DropDownListFor(model => model.SubGenreId, Model.SubGenres, "Select a SubGenre", new { @class = "form-control" })
-        <span asp-validation-for="SubGenreId" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Height">Height</label>
-        <input asp-for="Height" class="form-control" />
-        <span asp-validation-for="Height" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Price">Price</label>
-        <input asp-for="Price" class="form-control" />
-        <span asp-validation-for="Price" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Quantity">Quantity</label>
-        <input asp-for="Quantity" class="form-control" />
-        <span asp-validation-for="Quantity" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="PublicationDate">Publication Date</label>
-        <input asp-for="PublicationDate" type="date" class="form-control" />
-        <span asp-validation-for="PublicationDate" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="CoverImage">Cover Image</label>
-        <input asp-for="CoverImage" type="file" class="form-control-file" />
-        <span asp-validation-for="CoverImage" class="text-danger"></span>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Add</button>
-</form>
-
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+<style>
+    .label-decor {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333333;
     }
-}
+</style>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h3>Add New Book</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="AddNewBook" method="post" enctype="multipart/form-data">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+
+                        <div class="form-group">
+                            <label asp-for="Title" class="label-decor">Title</label>
+                            <input asp-for="Title" class="form-control" />
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="AuthorId" class="label-decor">Author</label>
+                            @Html.DropDownListFor(model => model.AuthorId, Model.Authors, "Select an Author", new { @class = "form-control" })
+                            <span asp-validation-for="AuthorId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="PublisherId" class="label-decor">Publisher</label>
+                            @Html.DropDownListFor(model => model.PublisherId, Model.Publishers, "Select a Publisher", new { @class = "form-control" })
+                            <span asp-validation-for="PublisherId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="GenreId" class="label-decor">Genre</label>
+                            @Html.DropDownListFor(model => model.GenreId, Model.Genres, "Select a Genre", new { @class = "form-control" })
+                            <span asp-validation-for="GenreId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="SubGenreId" class="label-decor">SubGenre</label>
+                            @Html.DropDownListFor(model => model.SubGenreId, Model.SubGenres, "Select a SubGenre", new { @class = "form-control" })
+                            <span asp-validation-for="SubGenreId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Height" class="label-decor">Height</label>
+                            <input asp-for="Height" class="form-control" />
+                            <span asp-validation-for="Height" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Price" class="label-decor">Price</label>
+                            <input asp-for="Price" class="form-control" />
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Quantity" class="label-decor">Quantity</label>
+                            <input asp-for="Quantity" class="form-control" />
+                            <span asp-validation-for="Quantity" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="PublicationDate" class="label-decor">Publication Date</label>
+                            <input asp-for="PublicationDate" type="date" class="form-control" />
+                            <span asp-validation-for="PublicationDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="CoverImage" class="label-decor">Cover Image</label>
+                            <input asp-for="CoverImage" type="file" class="form-control-file" />
+                            <span asp-validation-for="CoverImage" class="text-danger"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary mt-3 mb-2">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

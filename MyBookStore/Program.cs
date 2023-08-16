@@ -3,6 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using MyBookStore.Configuration;
 using MyBookStore.Data;
 using MyBookStore.Models;
+using MyBookStore.Services.Authors;
+using MyBookStore.Services.Books;
+using MyBookStore.Services.Genres;
+using MyBookStore.Services.Publishers;
+using MyBookStore.Services.SubGenres;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +31,12 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddRazorPages();
+
+builder.Services.AddTransient<IBookService, BookService>();
+builder.Services.AddTransient<IPublisherService, PublisherService>();
+builder.Services.AddTransient<IGenreService, GenreService>();
+builder.Services.AddTransient<ISubGenreService, SubGenreService>();
+builder.Services.AddTransient<IAuthorService, AuthorService>();
 
 var app = builder.Build();
 

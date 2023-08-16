@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using MyBookStore.Data;
 using MyBookStore.Models;
+using MyBookStore.Services.Books;
 using MyBookStore.ViewModels.Home;
 using System.Diagnostics;
 
@@ -9,19 +10,21 @@ namespace MyBookStore.Controllers
 {
 	public class HomeController : Controller
 	{
-		private readonly ILogger<HomeController> logger;
-        private readonly MyBookStoreDbContext db;
+		private readonly IBookService _bookService;
+		private readonly ILogger<HomeController> _logger;
+        private readonly MyBookStoreDbContext _db;
         private const int MaxBooksToShow = 5;
 
-		public HomeController(ILogger<HomeController> logger, MyBookStoreDbContext db)
+		public HomeController(IBookService bookService, ILogger<HomeController> logger, MyBookStoreDbContext db)
 		{
-			this.db = db;
-			this.logger = logger;
+			_db = db;
+			_logger = logger;
+			_bookService = bookService;
 		}
 
 		public IActionResult Index()
 		{
-            var newestBooks = db.Books.Include(a => a.Author).Include(a => a.Genre).OrderByDescending(book => book.PublicationDate).Take(MaxBooksToShow).ToList();
+            var newestBooks = _bookService.GetNewestBooks();
 
             if (newestBooks == null)
             {
