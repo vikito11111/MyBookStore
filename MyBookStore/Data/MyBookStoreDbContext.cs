@@ -20,8 +20,6 @@ namespace MyBookStore.Data
 
 		}
 
-		//public DbSet<User> Users { get; set; }
-
 		public DbSet<Author> Authors { get; set; }
 
 		public DbSet<Book> Books { get; set; }
@@ -31,6 +29,12 @@ namespace MyBookStore.Data
 		public DbSet<SubGenre> SubGenres { get; set; }
 
 		public DbSet<Publisher> Publishers { get; set; }
+
+        public DbSet<Forum> Forums { get; set; }
+
+        public DbSet<Topic> Topics { get; set; }
+
+        public DbSet<Comment> Comments { get; set; }
 
         public DbSet<ApplicationUserLibrary> ApplicationUserLibraries { get; set; }
 

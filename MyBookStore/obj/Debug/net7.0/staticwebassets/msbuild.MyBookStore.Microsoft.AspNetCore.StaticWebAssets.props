@@ -1536,6 +1536,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\63183de3-e20c-45bf-9eac-75f2529d4f58_image_2023-07-18_170619694.ico))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\7a8d814f-33bb-43b2-b989-9ad612c5b29a_show.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>MyBookStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MyBookStore</BasePath>
+      <RelativePath>uploads/7a8d814f-33bb-43b2-b989-9ad612c5b29a_show.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\7a8d814f-33bb-43b2-b989-9ad612c5b29a_show.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\8714b31d-7b1f-4a61-b87c-2af847fad6dd_Kayn_8.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>MyBookStore</SourceId>
