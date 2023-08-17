@@ -1,0 +1,147 @@
+﻿@model IEnumerable<MyBookStore.Models.Forum>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 topic-header">
+            <h1 class="display-4 mb-4">Forums</h1>
+            
+            <div class="create-forum-container">
+                <a href="@Url.Action("Create", "Forum")" class="btn-create-forum">+</a>
+            </div>
+        </div>
+    </div>
+
+    @foreach (var forum in Model)
+    {
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">@forum.Title</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">@forum.Description</p>
+                        <a href="@Url.Action("Topics", "Forum", new { id = forum.Id })" class="btn btn-view-topics">View Topics</a>
+                        <a href="@Url.Action("Create", "Topic", new { forumId = forum.Id })" class="btn btn-create-topic">Create New Topic</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+<style>
+    .topic-header 
+    {
+        text-align: center;
+        background-color: #f1f5f8;
+        padding: 50px;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .topic-header h1 
+    {
+        font-size: 3em;
+        color: #17a2b8;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .card-header 
+    {
+        background-color: #f9fafc;
+        border-radius: 10px 10px 0 0;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .card-header h2 
+    {
+        font-size: 2em;
+        color: #4682B4; 
+        margin-bottom: 10px;
+    }
+
+    .btn-info 
+    {
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+        color: #ffffff; 
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    .btn-info:hover 
+    {
+        background-color: #138496;
+        border-color: #117a8b;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .btn-create-forum
+    {
+        background-color: #117a8b;
+        border: none;
+        color: white;
+        padding: 16px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        line-height: 28px;
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.20);
+        transition: background-color 0.3s;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .btn-create-forum:hover 
+    {
+        background-color: #139c9e;
+    }
+
+    .create-forum-container 
+    {
+        text-align: center;
+    }
+
+    .btn-view-topics, .btn-create-topic 
+    {
+        width: 200px;
+        padding: 12px;
+        text-align: center;
+        border-radius: 5px;
+    }
+    
+    .btn-view-topics 
+    {
+        background-color: #117a8b;
+        color: #ffffff;
+        border-color: #117a8b;
+    }
+    
+    .btn-view-topics:hover 
+    {
+        background-color: #0f6c75;
+        border-color: #0f6c75;
+    }
+    
+    .btn-create-topic
+    {
+        background-color: #117a8b;
+        color: #ffffff;
+        border-color: #117a8b;
+    }
+    
+    .btn-create-topic:hover 
+    {
+         background-color: #0f6c75; 
+         border-color: #0f6c75;
+    }
+</style>

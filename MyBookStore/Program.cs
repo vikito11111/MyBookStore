@@ -5,9 +5,12 @@ using MyBookStore.Data;
 using MyBookStore.Models;
 using MyBookStore.Services.Authors;
 using MyBookStore.Services.Books;
+using MyBookStore.Services.Comments;
+using MyBookStore.Services.Forums;
 using MyBookStore.Services.Genres;
 using MyBookStore.Services.Publishers;
 using MyBookStore.Services.SubGenres;
+using MyBookStore.Services.Topics;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,6 +40,10 @@ builder.Services.AddTransient<IPublisherService, PublisherService>();
 builder.Services.AddTransient<IGenreService, GenreService>();
 builder.Services.AddTransient<ISubGenreService, SubGenreService>();
 builder.Services.AddTransient<IAuthorService, AuthorService>();
+
+builder.Services.AddTransient<IForumService, ForumService>();
+builder.Services.AddTransient<ITopicService, TopicService>();
+builder.Services.AddTransient<ICommentService, CommentService>();
 
 var app = builder.Build();
 

@@ -1,0 +1,21 @@
+﻿@using System.Security.Claims;
+@model MyBookStore.ViewModels.Forum.CreateForumViewModel
+
+<h1>Create New Forum</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Title">Title</label>
+        <input type="text" class="form-control" asp-for="Title" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <textarea class="form-control" asp-for="Description" required></textarea>
+    </div>
+
+    <input type="hidden" asp-for="CreatorId" value="@User.FindFirstValue(ClaimTypes.NameIdentifier)" />
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+

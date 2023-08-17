@@ -1,0 +1,106 @@
+﻿<div class="topic-header">
+    <h1>@Model.Topic.Title</h1>
+    <p>@Model.Topic.Description</p>
+</div>
+
+<h2>Comments</h2>
+@foreach (var comment in Model.Comments)
+{
+    <div class="comment-section">
+        <img class="profile-picture"
+         src="@(string.IsNullOrEmpty(comment.UserProfilePictureUrl) ? "https://placehold.it/75x75" : comment.UserProfilePictureUrl)"
+         alt="User Image">
+        <p>
+            @comment.Content <br>
+            <small>(Posted by: @comment.UserName on @comment.Created)</small>
+        </p>
+    </div>
+}
+
+<h2>Leave a Comment</h2>
+
+<form method="post" action="@Url.Action("AddComment", "Comment", new { topicId = Model.Topic.Id })" class="comment-form">
+    <textarea name="Content" rows="5" placeholder="Enter your comment here...">@Model.NewComment</textarea>
+    <input type="submit" value="Submit" />
+</form>
+
+<style>
+    .comment-form 
+    {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .comment-form textarea 
+    {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        resize: vertical;
+    }
+
+    .comment-form input[type="submit"] 
+    {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .comment-form input[type="submit"]:hover 
+    {
+        background-color: #45a049;
+    }
+
+    .profile-picture 
+    {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border: 1px solid #ccc;
+        margin-right: 10px;
+    }
+
+    .comment-section 
+    {
+        display: flex;
+        align-items: start;
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .topic-header 
+    {
+        text-align: center;
+        background-color: #f1f5f8;
+        padding: 50px;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .topic-header h1 
+    {
+        font-size: 2.5em;
+        color: #070707;
+        margin-bottom: 20px;
+    }
+
+    .topic-header p 
+    {
+        font-size: 1.2em;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+</style>

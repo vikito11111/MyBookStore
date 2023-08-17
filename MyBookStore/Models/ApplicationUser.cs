@@ -13,5 +13,9 @@ namespace MyBookStore.Models
         public string ProfilePictureUrl { get; set; }
 
         public virtual ICollection<ApplicationUserLibrary> ApplicationUserLibrary { get; set; } = new List<ApplicationUserLibrary>();
+
+        public virtual ICollection<Topic> Topics { get; set; } = new List<Topic>();
+
+
     }
 }

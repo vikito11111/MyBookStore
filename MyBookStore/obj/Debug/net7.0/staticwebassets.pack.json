@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\images\\071c001e-d0c1-487e-aff1-ded4438a92ae_thedarkurge-800x445.png"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\08a9126c-beee-4eee-a968-74bc40047355_thedarkurge-800x445.png",
+      "PackagePath": "staticwebassets\\images\\08a9126c-beee-4eee-a968-74bc40047355_thedarkurge-800x445.png"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\0e17b6ea-70c4-4fda-83d1-b6a365e227af_image-2023-05-09T235140.126.jpg",
       "PackagePath": "staticwebassets\\images\\0e17b6ea-70c4-4fda-83d1-b6a365e227af_image-2023-05-09T235140.126.jpg"
     },
@@ -357,8 +361,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\16af09b1-0199-4b95-bfe5-3d8162f44b94_thedarkurge-800x445.png",
+      "PackagePath": "staticwebassets\\uploads\\16af09b1-0199-4b95-bfe5-3d8162f44b94_thedarkurge-800x445.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\1db8d385-8133-4709-b2ad-1b625998c698_thedarkurge-800x445.png",
+      "PackagePath": "staticwebassets\\uploads\\1db8d385-8133-4709-b2ad-1b625998c698_thedarkurge-800x445.png"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\214e3932-0a2d-4ca9-b768-f9b2bacf43cd_show.png",
       "PackagePath": "staticwebassets\\uploads\\214e3932-0a2d-4ca9-b768-f9b2bacf43cd_show.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\24c6201b-e61e-4f9d-b86b-fc89c66f2f72_thedarkurge-800x445.png",
+      "PackagePath": "staticwebassets\\uploads\\24c6201b-e61e-4f9d-b86b-fc89c66f2f72_thedarkurge-800x445.png"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\276a3092-556b-4540-ab83-937cdb46e0d1_Kayn_8.jpg",
@@ -373,6 +389,14 @@
       "PackagePath": "staticwebassets\\uploads\\3039521b-00ad-4b7a-a4a0-f9f0a53e1152_thedarkurge-800x445.png"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\36438738-880f-4b93-be01-6ea64491f1be_image-2023-05-09T235140.126.jpg",
+      "PackagePath": "staticwebassets\\uploads\\36438738-880f-4b93-be01-6ea64491f1be_image-2023-05-09T235140.126.jpg"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\38ac5167-1003-4e2c-ae9b-dd7293da5e87_dark-urge-baldurs-gate-3.webp",
+      "PackagePath": "staticwebassets\\uploads\\38ac5167-1003-4e2c-ae9b-dd7293da5e87_dark-urge-baldurs-gate-3.webp"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\528ec101-c704-4d87-a1d1-2e722d6c3eba_thedarkurge-800x445.png",
       "PackagePath": "staticwebassets\\uploads\\528ec101-c704-4d87-a1d1-2e722d6c3eba_thedarkurge-800x445.png"
     },
@@ -385,12 +409,28 @@
       "PackagePath": "staticwebassets\\uploads\\63183de3-e20c-45bf-9eac-75f2529d4f58_image_2023-07-18_170619694.ico"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\667f2641-7b86-4f76-9628-96f27e6938d7_dark-urge-baldurs-gate-3.webp",
+      "PackagePath": "staticwebassets\\uploads\\667f2641-7b86-4f76-9628-96f27e6938d7_dark-urge-baldurs-gate-3.webp"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\6f8b3adb-aeb6-466b-87f5-d284e1455b10_thedarkurge-800x445.png",
+      "PackagePath": "staticwebassets\\uploads\\6f8b3adb-aeb6-466b-87f5-d284e1455b10_thedarkurge-800x445.png"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\7a8d814f-33bb-43b2-b989-9ad612c5b29a_show.png",
       "PackagePath": "staticwebassets\\uploads\\7a8d814f-33bb-43b2-b989-9ad612c5b29a_show.png"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\7f3688db-634f-4d3f-8b9b-d9756d39cba1_Kayn_8.jpg",
+      "PackagePath": "staticwebassets\\uploads\\7f3688db-634f-4d3f-8b9b-d9756d39cba1_Kayn_8.jpg"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\8714b31d-7b1f-4a61-b87c-2af847fad6dd_Kayn_8.jpg",
       "PackagePath": "staticwebassets\\uploads\\8714b31d-7b1f-4a61-b87c-2af847fad6dd_Kayn_8.jpg"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\8cb3b9ec-01e8-40a1-b29d-7fb8f79ce2e9_thedarkurge-800x445.png",
+      "PackagePath": "staticwebassets\\uploads\\8cb3b9ec-01e8-40a1-b29d-7fb8f79ce2e9_thedarkurge-800x445.png"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\a3ca33db-d210-4565-8fda-f825fc0e0e21_show.png",
@@ -401,8 +441,20 @@
       "PackagePath": "staticwebassets\\uploads\\a3e295c8-9c8f-45ba-a71c-c76a23b24caa_show.png"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\a92529bc-a194-4c50-ab43-1dd714d8a4b8_thedarkurge-800x445.png",
+      "PackagePath": "staticwebassets\\uploads\\a92529bc-a194-4c50-ab43-1dd714d8a4b8_thedarkurge-800x445.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\c4d15536-0e3e-4a49-b05a-706bfa692dfa_show.png",
+      "PackagePath": "staticwebassets\\uploads\\c4d15536-0e3e-4a49-b05a-706bfa692dfa_show.png"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\d1eaadfd-9e5a-4303-9c9d-a46240c53591_Kayn_8.jpg",
       "PackagePath": "staticwebassets\\uploads\\d1eaadfd-9e5a-4303-9c9d-a46240c53591_Kayn_8.jpg"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\d56d6e12-d760-426f-aac5-673bd6f18d4d_show.png",
+      "PackagePath": "staticwebassets\\uploads\\d56d6e12-d760-426f-aac5-673bd6f18d4d_show.png"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\e2b8a9ec-4073-4e35-a6a9-4244b2940505_show.png",
