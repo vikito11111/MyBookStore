@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -16,7 +17,7 @@ using Publisher = MyBookStore.Models.Publisher;
 
 namespace MyBookStore.Controllers
 {
-    public class AdminController : Controller
+    public class AdminController : BaseController
     {
         private readonly IAuthorService _authorService;
         private readonly ISubGenreService _subGenreService;
@@ -25,8 +26,9 @@ namespace MyBookStore.Controllers
         private readonly IBookService _bookService;
         private readonly MyBookStoreDbContext _context;
         private readonly IWebHostEnvironment _hostingEnvironment;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public AdminController(IAuthorService authorService, ISubGenreService subGenreService, IGenreService genreService, IPublisherService publisherService, IBookService bookService, MyBookStoreDbContext context, IWebHostEnvironment hostingEnvironment)
+        public AdminController(IAuthorService authorService, ISubGenreService subGenreService, IGenreService genreService, IPublisherService publisherService, IBookService bookService, MyBookStoreDbContext context, IWebHostEnvironment hostingEnvironment, UserManager<ApplicationUser> userManager) : base(userManager, context)
         {
             _context = context;
             _hostingEnvironment = hostingEnvironment;
@@ -35,6 +37,7 @@ namespace MyBookStore.Controllers
             _genreService = genreService;
             _subGenreService = subGenreService;
             _authorService = authorService;
+            _userManager = userManager;
         }
 
         public IActionResult AddAuthor()

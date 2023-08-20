@@ -27,7 +27,6 @@ namespace MyBookStore.Services.Books
                     Title = model.Title,
                     Height = model.Height,
                     Price = model.Price,
-                    Quantity = model.Quantity,
                     PublicationDate = model.PublicationDate,
                     AuthorId = model.AuthorId,
                     PublisherId = model.PublisherId,

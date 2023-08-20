@@ -1,17 +1,20 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using MyBookStore.Data;
 using MyBookStore.Models;
 using MyBookStore.Services.Comments;
 
 namespace MyBookStore.Controllers
 {
-    public class CommentController : Controller
+    public class CommentController : BaseController
     {
         private readonly ICommentService _commentService;
+        private readonly MyBookStoreDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public CommentController(ICommentService commentService, UserManager<ApplicationUser> userManager)
+        public CommentController(ICommentService commentService, UserManager<ApplicationUser> userManager, MyBookStoreDbContext context) : base(userManager, context)
         {
+            _context = context;
             _commentService = commentService;
             _userManager = userManager;
         }

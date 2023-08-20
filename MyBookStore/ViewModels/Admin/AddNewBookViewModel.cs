@@ -39,9 +39,6 @@ namespace MyBookStore.ViewModels.Admin
         public IFormFile CoverImage { get; set; }
 
         [Required]
-        public int Quantity { get; set; }
-
-        [Required]
         public DateTime PublicationDate { get; set; }
 
         public List<SelectListItem>? Authors { get; set; }

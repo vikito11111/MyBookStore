@@ -17,7 +17,6 @@
       "Image": "https://en.wikipedia.org/wiki/Wiley_(publisher)#/media/File:Wiley_logo.svg"
     },
     "CoverImage": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg",
-    "Quantity": 50,
     "PublicationDate": "07-12-1978"
   },
   {
@@ -38,7 +37,6 @@
       "Image": "https://en.wikipedia.org/wiki/Wiley_(publisher)#/media/File:Wiley_logo.svg"
     },
     "CoverImage": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson2.jpg",
-    "Quantity": 40,
     "PublicationDate": "01-02-1987"
   },
   {
@@ -59,7 +57,6 @@
       "Image": "https://en.wikipedia.org/wiki/Penguin_Books#/media/File:Penguin_logo.svg"
     },
     "CoverImage": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/adzic.jpg",
-    "Quantity": 30,
     "PublicationDate": "17-02-1962"
   },
   {
@@ -80,7 +77,6 @@
       "Image": "https://www.stm-publishing.com/wp-content/uploads/2011/11/harper.png"
     },
     "CoverImage": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ahmed.jpg",
-    "Quantity": 20,
     "PublicationDate": "22-07-2001"
   },
   {
@@ -101,7 +97,6 @@
       "Image": "https://en.wikipedia.org/wiki/Penguin_Books#/media/File:Penguin_logo.svg"
     },
     "CoverImage": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/allen.jpg",
-    "Quantity": 10,
     "PublicationDate": "18-04-1899"
   }
 ]

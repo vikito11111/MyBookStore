@@ -5,6 +5,7 @@ using MyBookStore.Data;
 using MyBookStore.Models;
 using MyBookStore.Services.Authors;
 using MyBookStore.Services.Books;
+using MyBookStore.Services.Carts;
 using MyBookStore.Services.Comments;
 using MyBookStore.Services.Forums;
 using MyBookStore.Services.Genres;
@@ -44,6 +45,8 @@ builder.Services.AddTransient<IAuthorService, AuthorService>();
 builder.Services.AddTransient<IForumService, ForumService>();
 builder.Services.AddTransient<ITopicService, TopicService>();
 builder.Services.AddTransient<ICommentService, CommentService>();
+
+builder.Services.AddTransient<ICartService, CartService>();
 
 var app = builder.Build();
 

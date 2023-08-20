@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyBookStore.Data;
 using MyBookStore.Models;
@@ -8,18 +9,20 @@ using System.Diagnostics;
 
 namespace MyBookStore.Controllers
 {
-	public class HomeController : Controller
+	public class HomeController : BaseController
 	{
 		private readonly IBookService _bookService;
 		private readonly ILogger<HomeController> _logger;
         private readonly MyBookStoreDbContext _db;
         private const int MaxBooksToShow = 5;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-		public HomeController(IBookService bookService, ILogger<HomeController> logger, MyBookStoreDbContext db)
-		{
+        public HomeController(IBookService bookService, ILogger<HomeController> logger, UserManager<ApplicationUser> userManager, MyBookStoreDbContext db) : base(userManager, db)
+        {
 			_db = db;
 			_logger = logger;
 			_bookService = bookService;
+			_userManager = userManager;
 		}
 
 		public IActionResult Index()

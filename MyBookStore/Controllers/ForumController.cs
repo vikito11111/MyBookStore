@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Build.Framework;
+using MyBookStore.Data;
 using MyBookStore.Models;
 using MyBookStore.Services.Forums;
 using MyBookStore.Services.Topics;
@@ -10,17 +11,19 @@ using MyBookStore.ViewModels.Forum;
 namespace MyBookStore.Controllers
 {
     [Authorize]
-    public class ForumController : Controller
+    public class ForumController : BaseController
     {
         private readonly IForumService _forumService;
         private readonly ITopicService _topicService;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly MyBookStoreDbContext _context;
 
-        public ForumController(IForumService forumService, ITopicService topicService, UserManager<ApplicationUser> userManager)
+        public ForumController(IForumService forumService, ITopicService topicService, UserManager<ApplicationUser> userManager, MyBookStoreDbContext context) : base(userManager, context)
         {
             _forumService = forumService;
             _topicService = topicService;
             _userManager = userManager;
+            _context = context;
         }
 
         public IActionResult Index()

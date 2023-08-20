@@ -8,6 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MyBookStore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MyBookStore.styles.css" asp-append-version="true" />
@@ -55,6 +56,15 @@
     }
 }
                     </ul>
+                    <div class="cart-icon">
+                        <a href="@Url.Action("Index", "Cart")" class="cart-link">
+                            <i class="fas fa-shopping-cart"></i>
+                            @if (ViewBag.CartItemCount > 0)
+                            {
+                                <span class="cart-count">@ViewBag.CartItemCount</span>
+                            }
+                        </a>
+                    </div>
                     <partial name="_LoginPartial" />
                 </div>
             </div>
@@ -84,3 +94,39 @@
 
 </body>
 </html>
+
+<style>
+    .cart-link 
+    {
+        position: relative;
+        color: #333;
+        text-decoration: none;
+    }
+
+    .fas.fa-shopping-cart 
+    {
+        font-size: 24px;
+    }
+
+    .cart-count 
+    {
+        position: absolute;
+        top: -5px;
+        right: -6px;
+        background-color: red;
+        color: white;
+        padding: 1px 6px;
+        border-radius: 50%;
+        font-size: 10px;
+    }
+
+    .cart-link:hover 
+    {
+        color: #555;
+    }
+
+    .cart-link:hover .cart-count 
+    {
+        background-color: #e00;
+    }
+</style>

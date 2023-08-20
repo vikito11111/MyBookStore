@@ -1,0 +1,60 @@
+﻿@model MyBookStore.ViewModels.Cart.CartViewModel
+
+<div class="container mt-5">
+    <h2>Your Cart</h2>
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    @if (Model != null && Model.CartItems.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.CartItems)
+                {
+                    <tr>
+                        <td>
+                            <img src="@item.Book.CoverImage" alt="@item.Book.Title cover" width="50" />
+                        </td>
+                        <td>@item.Book.Title</td>
+                        <td>@item.Book.Price?.ToString("C")</td>
+                        <td>
+                            <form method="post" action="@Url.Action("Remove", "Cart", new { itemId = item.Id })">
+                                <button type="submit" class="btn btn-danger">Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="text-right">
+            <h3>Total: @Model.TotalPrice.ToString("C")</h3>
+            <form method="post" action="@Url.Action("Checkout", "Cart")">
+                <button type="submit" class="btn btn-success">Checkout</button>
+            </form>
+        </div>
+    }
+    else
+    {
+        <p>Your cart is empty.</p>
+    }
+</div>

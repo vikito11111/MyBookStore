@@ -3,33 +3,30 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="container">
-    <h1 class="text-center">Welcome to the Book Store</h1>
+<div class="container mt-5">
+    <h1 class="display-4 text-center mb-5">Welcome to the Book Store</h1>
 
-    <!-- Section function to display books -->
     @foreach (var bookSection in new[] { ("Most Recently Added Books:", Model.NewestBooks) })
     {
-        <h2 class="section-title">@bookSection.Item1</h2>
+        <h2 class="mb-4">@bookSection.Item1</h2>
         <div class="row">
             @foreach (var book in bookSection.Item2)
             {
-                <div class="col-md-6">
-                    <div class="card book-card mb-4">
-                        <div class="row">
-                            <div class="col-md-5">
-                                <img class="book-image" src="@book.CoverImage" alt="Book cover image">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body">
-                                    <h5 class="card-title">@book.Title</h5>
-                                    <table class="table table-borderless book-info">
-                                        <tr><td>Author:</td><td>@book.Author?.Name</td></tr>
-                                        <tr><td>Published:</td><td>@book.PublicationDate.ToString("d")</td></tr>
-                                        <tr><td>Genre:</td><td>@book.Genre?.Name</td></tr>
-                                        <tr><td>Price:</td><td>$@book.Price</td></tr>
-                                    </table>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.href='@Url.Action("ViewBook", "Book", new { id = book.Id })'">View</button>
-                                    <a href="@Url.Action("BuyBook", "Book", new { id = book.Id })" class="btn btn-primary">Buy</a>
+                <div class="col-md-4 mb-4">
+                    <div class="book-card card">
+                        <img class="card-img-top book-image" src="@book.CoverImage" alt="Book cover image">
+                        <div class="card-body">
+                            <h5 class="card-title">@book.Title</h5>
+                            <p class="card-text">
+                                <strong>Author:</strong> @book.Author?.Name <br>
+                                <strong>Published:</strong> @book.PublicationDate.ToString("d") <br>
+                                <strong>Genre:</strong> @book.Genre?.Name <br>
+                                <strong>Price:</strong> $@book.Price
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-between align-items-center button-container">
+                                    <a href='@Url.Action("ViewBook", "Book", new { id = book.Id })' class="btn btn-outline-secondary view-btn">View</a>
+                                    <a href="@Url.Action("AddToCart", "Cart", new { bookId = book.Id })" class="btn btn-primary buy-btn">Buy</a>
                                 </div>
                             </div>
                         </div>
@@ -41,27 +38,84 @@
 </div>
 
 <style>
-    .section-title {
-        color: #333;
-        margin-top: 30px;
+    .book-card 
+    {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     }
 
-    .book-card {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    .book-card:hover 
+    {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
     }
 
-    .book-image {
-        width: 100%;
-        height: auto;
+    .book-image 
+    {
+        max-height: 250px;
         object-fit: cover;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
     }
 
-    .text-center {
-        text-align: center;
+    .button-container .btn-primary, .button-container .view-btn 
+    {
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .book-info td {
-        padding: 0;
+    .button-container .btn-primary 
+    {
+        background-image: linear-gradient(to right, #FF5733, #FF8A33);
+        border: none;
+        color: white;
+    }
+
+    .button-container .btn-primary:hover 
+    {
+        background-image: linear-gradient(to right, #FF8A33, #FF5733);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+    }
+
+    .button-container .btn-primary:active 
+    {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(1px);
+    }
+
+    .button-container .view-btn 
+    {
+        color: #FF5733;
+        border: 2px solid #FF5733;
+    }
+
+    .button-container .view-btn:hover 
+    {
+        color: white;
+        background-color: #FF5733;
+        border-color: #FF5733;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+    }
+
+    .button-container .view-btn:active 
+    {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(1px);
+    }
+
+    .card-text 
+    {
+        margin-bottom: 1rem;
+    }
+
+    .display-4 
+    {
+        font-weight: 400;
     }
 </style>
 

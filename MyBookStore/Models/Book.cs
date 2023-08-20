@@ -41,12 +41,9 @@ namespace MyBookStore.Models
 
         public string? CoverImage { get; set; }
 
-        [Required]
-		public int Quantity { get; set; }
-
 		[Required]
 		public DateTime PublicationDate { get; set; }
 
-		//public virtual ICollection<ApplicationUserLibrary> ApplicationUserLibrary { get; set; } = new List<ApplicationUserLibrary>();
+		public virtual ICollection<ApplicationUserLibrary> ApplicationUserLibrary { get; set; } = new List<ApplicationUserLibrary>();
 	}
 }

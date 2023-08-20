@@ -18,8 +18,6 @@
 
         public string CoverImage { get; set; }
 
-        public int Quantity { get; set; }
-
         public string PublicationDate { get; set; }
 
         public bool IsBestSeller { get; set; }

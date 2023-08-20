@@ -36,6 +36,10 @@ namespace MyBookStore.Data
 
         public DbSet<Comment> Comments { get; set; }
 
+        public DbSet<Cart> Carts { get; set; }
+
+        public DbSet<CartItem> CartItems { get; set; }
+
         public DbSet<ApplicationUserLibrary> ApplicationUserLibraries { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

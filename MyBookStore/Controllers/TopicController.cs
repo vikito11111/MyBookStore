@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using MyBookStore.Data;
 using MyBookStore.Models;
 using MyBookStore.Services.Comments;
 using MyBookStore.Services.Topics;
@@ -10,13 +11,14 @@ using MyBookStore.ViewModels.Topic;
 namespace MyBookStore.Controllers
 {
     [Authorize]
-    public class TopicController : Controller
+    public class TopicController : BaseController
     {
         private readonly ITopicService _topicService;
         private readonly ICommentService _commentService;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly MyBookStoreDbContext _context;
 
-        public TopicController(ITopicService topicService, ICommentService commentService, UserManager<ApplicationUser> userManager)
+        public TopicController(ITopicService topicService, ICommentService commentService, UserManager<ApplicationUser> userManager, MyBookStoreDbContext context) : base(userManager, context)
         {
             _topicService = topicService;
             _commentService = commentService;

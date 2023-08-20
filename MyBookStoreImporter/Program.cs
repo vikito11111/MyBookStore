@@ -54,7 +54,6 @@ namespace BookStoreWeb.Importer
                         Price = jsonBook.Price,
                         PublisherId = publisher.Id,
                         CoverImage = jsonBook.CoverImage,
-                        Quantity = jsonBook.Quantity,
                         PublicationDate = DateTime.ParseExact(jsonBook.PublicationDate, "dd-MM-yyyy", CultureInfo.InvariantCulture)
                     };
 

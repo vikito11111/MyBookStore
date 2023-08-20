@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cM5Z3WhQ7xLD9OHrmedTWR9hMRSDR9ZPYXwaxF78U2k=",
+  "Hash": "r7mNfrz6p0qnMPckAJoZjfmqklRFjkwPYABT18GGXRU=",
   "Source": "MyBookStore",
   "BasePath": "_content/MyBookStore",
   "Mode": "Default",
@@ -1256,6 +1256,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\3c8015da-13bf-4040-9d80-5efc999eedf9_Screenshot_2020_10_15_14.45.45.0.jpg"
+    },
+    {
+      "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\3e641d63-06f1-4f46-822f-1dc40c02d853_thedarkurge-800x445.png",
+      "SourceId": "MyBookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\",
+      "BasePath": "_content/MyBookStore",
+      "RelativePath": "images/3e641d63-06f1-4f46-822f-1dc40c02d853_thedarkurge-800x445.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\3e641d63-06f1-4f46-822f-1dc40c02d853_thedarkurge-800x445.png"
     },
     {
       "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\40b78bae-f7fe-4108-b0e2-9580aeb6c4c1_Gwent Account.png",
@@ -2584,6 +2601,23 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\0e7a11d4-7512-4f98-9076-29124d1d6376_thedarkurge-800x445.png",
+      "SourceId": "MyBookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\",
+      "BasePath": "_content/MyBookStore",
+      "RelativePath": "uploads/0e7a11d4-7512-4f98-9076-29124d1d6376_thedarkurge-800x445.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\0e7a11d4-7512-4f98-9076-29124d1d6376_thedarkurge-800x445.png"
+    },
+    {
       "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\16af09b1-0199-4b95-bfe5-3d8162f44b94_thedarkurge-800x445.png",
       "SourceId": "MyBookStore",
       "SourceType": "Discovered",
@@ -2737,6 +2771,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\38ac5167-1003-4e2c-ae9b-dd7293da5e87_dark-urge-baldurs-gate-3.webp"
     },
     {
+      "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\44474e1e-71a0-4b80-893c-8bf9b850da97_thedarkurge-800x445.png",
+      "SourceId": "MyBookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\",
+      "BasePath": "_content/MyBookStore",
+      "RelativePath": "uploads/44474e1e-71a0-4b80-893c-8bf9b850da97_thedarkurge-800x445.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\44474e1e-71a0-4b80-893c-8bf9b850da97_thedarkurge-800x445.png"
+    },
+    {
       "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\528ec101-c704-4d87-a1d1-2e722d6c3eba_thedarkurge-800x445.png",
       "SourceId": "MyBookStore",
       "SourceType": "Discovered",
@@ -2873,6 +2924,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\8714b31d-7b1f-4a61-b87c-2af847fad6dd_Kayn_8.jpg"
     },
     {
+      "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\89777965-b1ee-428c-a178-ae9d7fed65e2_thedarkurge-800x445.png",
+      "SourceId": "MyBookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\",
+      "BasePath": "_content/MyBookStore",
+      "RelativePath": "uploads/89777965-b1ee-428c-a178-ae9d7fed65e2_thedarkurge-800x445.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\89777965-b1ee-428c-a178-ae9d7fed65e2_thedarkurge-800x445.png"
+    },
+    {
       "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\8cb3b9ec-01e8-40a1-b29d-7fb8f79ce2e9_thedarkurge-800x445.png",
       "SourceId": "MyBookStore",
       "SourceType": "Discovered",
@@ -2941,6 +3009,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\a92529bc-a194-4c50-ab43-1dd714d8a4b8_thedarkurge-800x445.png"
     },
     {
+      "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\b89bf9aa-ef74-42bf-9ff5-e1460d5dc7cf_show.png",
+      "SourceId": "MyBookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\",
+      "BasePath": "_content/MyBookStore",
+      "RelativePath": "uploads/b89bf9aa-ef74-42bf-9ff5-e1460d5dc7cf_show.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\b89bf9aa-ef74-42bf-9ff5-e1460d5dc7cf_show.png"
+    },
+    {
       "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\c4d15536-0e3e-4a49-b05a-706bfa692dfa_show.png",
       "SourceId": "MyBookStore",
       "SourceType": "Discovered",
@@ -2973,6 +3058,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\d1eaadfd-9e5a-4303-9c9d-a46240c53591_Kayn_8.jpg"
+    },
+    {
+      "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\d41f2c63-f0ba-455a-9100-76ee1905555a_thedarkurge-800x445.png",
+      "SourceId": "MyBookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\",
+      "BasePath": "_content/MyBookStore",
+      "RelativePath": "uploads/d41f2c63-f0ba-455a-9100-76ee1905555a_thedarkurge-800x445.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\d41f2c63-f0ba-455a-9100-76ee1905555a_thedarkurge-800x445.png"
     },
     {
       "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\d56d6e12-d760-426f-aac5-673bd6f18d4d_show.png",

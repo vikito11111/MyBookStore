@@ -30,7 +30,7 @@
             <p><strong>Pages:</strong> @Model.Height</p>
             <p><strong>Price:</strong> @Model.Price$</p>
             <div class="button-container">
-                <a href="@Url.Action("BuyBook", "Books", new { id = Model.Id })" class="btn btn-primary">Buy Now</a>
+                <a href="@Url.Action("AddToCart", "Cart", new { bookId = Model.Id })" class="btn btn-primary">Buy</a>
             </div>
         </div>
     </div>
@@ -58,8 +58,29 @@
         border-radius: 5px;
     }
 
-    .button-container {
-        margin-top: 20px;
+    .button-container .btn-primary 
+    {
+        background-image: linear-gradient(to right, #FF5733, #FF8A33);
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        font-weight: bold;
+    }
+
+    .button-container .btn-primary:hover 
+    {
+        background-image: linear-gradient(to right, #FF8A33, #FF5733);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+    }
+
+    .button-container .btn-primary:active 
+    {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(1px);
     }
 
     p {
