@@ -416,6 +416,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\bcf6de86-7400-4ce7-ba2a-ff91bd85d148_Lost Ark Character.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\c29a1de9-f550-4b2e-9774-cfdd029d69a3_Gwent Account.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>MyBookStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MyBookStore</BasePath>
+      <RelativePath>images/c29a1de9-f550-4b2e-9774-cfdd029d69a3_Gwent Account.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\c29a1de9-f550-4b2e-9774-cfdd029d69a3_Gwent Account.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\c621141e-6b76-4a6c-8c4d-30402b047a12_dark-urge-baldurs-gate-3.webp))">
       <SourceType>Package</SourceType>
       <SourceId>MyBookStore</SourceId>
@@ -1727,6 +1743,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\7a8d814f-33bb-43b2-b989-9ad612c5b29a_show.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\7c34e03d-883b-43b4-b5ef-1051ccc49342_Screenshot_2020_10_15_14.45.45.0.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>MyBookStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MyBookStore</BasePath>
+      <RelativePath>uploads/7c34e03d-883b-43b4-b5ef-1051ccc49342_Screenshot_2020_10_15_14.45.45.0.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\7c34e03d-883b-43b4-b5ef-1051ccc49342_Screenshot_2020_10_15_14.45.45.0.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\7f3688db-634f-4d3f-8b9b-d9756d39cba1_Kayn_8.jpg))">
       <SourceType>Package</SourceType>

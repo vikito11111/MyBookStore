@@ -109,6 +109,10 @@
       "PackagePath": "staticwebassets\\images\\bcf6de86-7400-4ce7-ba2a-ff91bd85d148_Lost Ark Character.png"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\c29a1de9-f550-4b2e-9774-cfdd029d69a3_Gwent Account.png",
+      "PackagePath": "staticwebassets\\images\\c29a1de9-f550-4b2e-9774-cfdd029d69a3_Gwent Account.png"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\c621141e-6b76-4a6c-8c4d-30402b047a12_dark-urge-baldurs-gate-3.webp",
       "PackagePath": "staticwebassets\\images\\c621141e-6b76-4a6c-8c4d-30402b047a12_dark-urge-baldurs-gate-3.webp"
     },
@@ -431,6 +435,10 @@
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\7a8d814f-33bb-43b2-b989-9ad612c5b29a_show.png",
       "PackagePath": "staticwebassets\\uploads\\7a8d814f-33bb-43b2-b989-9ad612c5b29a_show.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\7c34e03d-883b-43b4-b5ef-1051ccc49342_Screenshot_2020_10_15_14.45.45.0.jpg",
+      "PackagePath": "staticwebassets\\uploads\\7c34e03d-883b-43b4-b5ef-1051ccc49342_Screenshot_2020_10_15_14.45.45.0.jpg"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\7f3688db-634f-4d3f-8b9b-d9756d39cba1_Kayn_8.jpg",

@@ -12,6 +12,7 @@ using MyBookStore.Services.Genres;
 using MyBookStore.Services.Publishers;
 using MyBookStore.Services.SubGenres;
 using MyBookStore.ViewModels.Admin;
+using MyBookStore.ViewModels.ApplicationUser;
 using System.Security.Policy;
 using Publisher = MyBookStore.Models.Publisher;
 
@@ -166,6 +167,21 @@ namespace MyBookStore.Controllers
             model.SubGenres = _context.SubGenres.Select(s => new SelectListItem { Value = s.Id.ToString(), Text = s.Name }).ToList();
 
             return View(model);
+        }
+
+        public IActionResult Members()
+        {
+            var users = _userManager.Users.Select(u => new ApplicationUserViewModel
+            {
+                Id = u.Id,
+                FirstName = u.FirstName,
+                LastName = u.LastName,
+                Email = u.Email,
+                PhoneNumber = u.PhoneNumber,
+                Balance = u.Balance
+            }).ToList();
+
+            return View(users);
         }
     }
 }

@@ -1,0 +1,119 @@
+﻿@model IEnumerable<MyBookStore.Models.Book>
+
+<div class="library-header">
+    Your Library
+</div>
+<div class="book-list">
+    @foreach (var book in Model)
+    {
+        <div class="book-card">
+            <img class="book-cover" src="@book.CoverImage" alt="@book.Title cover image">
+            <div class="book-detail-section">
+                <span>Title: @book.Title</span>
+            </div>
+            <div class="book-detail-section">
+                <span>Author: @book.Author</span>
+            </div>
+            <div class="book-detail-section">
+                <span>Genre: @book.Genre</span>
+            </div>
+            <div class="book-detail-section">
+                <span>SubGenre: @book.SubGenre.Name</span>
+            </div>
+            <div class="book-detail-section">
+                <span>Publisher: @book.Publisher</span>
+            </div>
+            <div class="book-detail-section">
+                <span>Published On: @book.PublicationDate.ToString("dd-MM-yyyy")</span>
+            </div>
+            <div class="book-detail-section">
+                <span>Pages: @book.Height</span>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    body 
+    {
+        font-family: 'Arial', sans-serif;
+    }
+
+    .library-header 
+    {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        color: #01579B;
+        border: 5px solid #87CEFA;
+        font-weight: 700;
+        font-size: 3rem;
+        text-align: center;
+        padding: 20px 40px;
+        margin: 2rem 0;
+        background: linear-gradient(135deg,#2196F3, #237CCA);
+        background-color: #007BF3;
+        border-radius: 20px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .book-list 
+    {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .book-card 
+    {
+        background: linear-gradient(135deg, #42A5F5, #42A5F4);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        width: 320px;
+        height: auto;
+        overflow: hidden;
+        padding: 1rem 1.5rem;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .book-card:hover 
+    {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    .book-cover 
+    {
+        max-height: 220px;
+        max-width: 100%;
+        margin: 0 auto 1rem auto;
+        display: block;
+        border-radius: 8px;
+    }
+
+    .book-detail-section 
+    {
+        background: #ffffff;
+        padding: 0.8rem 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        transition: background 0.3s;
+    }
+
+    .book-detail-section:hover 
+    {
+        background: #f2f2f2;
+    }
+
+    .book-detail-section:not(:last-child) 
+    {
+        margin-bottom: 1rem;
+    }
+
+    .book-detail-section span 
+    {
+        font-weight: 500;
+        color: #333;
+    }
+</style>

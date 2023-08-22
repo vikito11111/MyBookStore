@@ -2,25 +2,105 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
-<ul class="navbar-nav">
-@if (SignInManager.IsSignedIn(User))
-{
-    <li class="nav-item">
-        <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
+<ul class="navbar-nav user-nav-items">
+
+    <li class="nav-item cart-item">
+        <a href="@Url.Action("Index", "Cart")" class="nav-link">
+            <i class="fas fa-shopping-cart"></i>
+            @if (ViewBag.CartItemCount > 0)
+            {
+                <span class="cart-count">@ViewBag.CartItemCount</span>
+            }
+        </a>
     </li>
-    <li class="nav-item">
-        <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-            <button  type="submit" class="nav-link btn btn-link text-dark">Logout</button>
-        </form>
+    <li class="nav-item separator"></li>
+    <li class="nav-item library-item">
+        <a href="@Url.Action("Index", "Library")" class="nav-link">
+            <i class="fas fa-book-reader"></i> My Library
+        </a>
     </li>
-}
-else
-{
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
-    </li>
-}
+    <li class="nav-item separator"></li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
+        </li>
+        <li class="nav-item">
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+            </form>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        </li>
+    }
 </ul>
+
+<style>
+    .user-nav-items 
+    {
+        display: flex;
+        align-items: center;
+    }
+
+    .library-item, .cart-item 
+    {
+        padding: 0 15px;
+        position: relative;
+    }
+
+    .cart-count, .library-count 
+    {
+        position: absolute;
+        top: -2px;
+        right: 4px;
+        background-color: red;
+        color: white;
+        padding: 1px 4px;
+        border-radius: 50%;
+        font-size: 12px;
+        min-width: 20px;
+        text-align: center;
+    }
+
+    .cart-link:hover .cart-count, .library-link:hover .library-count 
+    {
+        background-color: #e00;
+    }
+
+    .separator
+    {
+        width: 2px;
+        background-color:#999;
+        height: 24px;
+        margin: 0 10px;
+    }
+
+    .nav-item a.nav-link 
+    {
+        color: #000;
+    }
+
+    .nav-item a.nav-link:hover 
+    {
+        color: black;
+    }
+
+    .nav-item button.nav-link 
+    {
+        background: none;
+        border: none;
+        color: #000;
+    }
+
+    .nav-item button.nav-link:hover 
+    {
+        color: black;
+    }
+</style>

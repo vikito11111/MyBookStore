@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "r7mNfrz6p0qnMPckAJoZjfmqklRFjkwPYABT18GGXRU=",
+  "Hash": "SFlQGy6FML2LVNq2fU2hz/c62727pfmkdFsyJdD0AO0=",
   "Source": "MyBookStore",
   "BasePath": "_content/MyBookStore",
   "Mode": "Default",
@@ -1513,6 +1513,23 @@
       "OriginalItemSpec": "wwwroot\\images\\bcf6de86-7400-4ce7-ba2a-ff91bd85d148_Lost Ark Character.png"
     },
     {
+      "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\c29a1de9-f550-4b2e-9774-cfdd029d69a3_Gwent Account.png",
+      "SourceId": "MyBookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\",
+      "BasePath": "_content/MyBookStore",
+      "RelativePath": "images/c29a1de9-f550-4b2e-9774-cfdd029d69a3_Gwent Account.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\c29a1de9-f550-4b2e-9774-cfdd029d69a3_Gwent Account.png"
+    },
+    {
       "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\c621141e-6b76-4a6c-8c4d-30402b047a12_dark-urge-baldurs-gate-3.webp",
       "SourceId": "MyBookStore",
       "SourceType": "Discovered",
@@ -2888,6 +2905,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\7a8d814f-33bb-43b2-b989-9ad612c5b29a_show.png"
+    },
+    {
+      "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\7c34e03d-883b-43b4-b5ef-1051ccc49342_Screenshot_2020_10_15_14.45.45.0.jpg",
+      "SourceId": "MyBookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\",
+      "BasePath": "_content/MyBookStore",
+      "RelativePath": "uploads/7c34e03d-883b-43b4-b5ef-1051ccc49342_Screenshot_2020_10_15_14.45.45.0.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\7c34e03d-883b-43b4-b5ef-1051ccc49342_Screenshot_2020_10_15_14.45.45.0.jpg"
     },
     {
       "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\7f3688db-634f-4d3f-8b9b-d9756d39cba1_Kayn_8.jpg",

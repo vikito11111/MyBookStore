@@ -142,14 +142,14 @@ namespace MyBookStore.Controllers
         {
             var topic = _topicService.GetTopicById(id);
             var comments = _commentService.GetCommentsByTopic(id)
-                                  .Select(c => new CommentViewModel
-                                  {
-                                      Content = c.Content,
-                                      Created = c.Created,
-                                      UserName = c.User.UserName,
-                                      UserProfilePictureUrl = c.User.ProfilePictureUrl
-                                  })
-                                  .ToList();
+                .Select(c => new CommentViewModel
+                {
+                    Content = c.Content,
+                    Created = c.Created,
+                    UserName = c.User.UserName,
+                    UserProfilePictureUrl = c.User.ProfilePictureUrl
+                })
+                .ToList();
 
             var viewModel = new TopicDetailViewModel
             {

@@ -29,6 +29,12 @@ namespace MyBookStore.Controllers
         public IActionResult Index()
         {
             var forums = _forumService.GetAll();
+            var user = _userManager.GetUserAsync(User).Result;
+            var isAdmin = _userManager.IsInRoleAsync(user, "Admin").Result;
+
+            ViewBag.IsAdmin = isAdmin;
+            ViewBag.UserId = user?.Id;
+
             return View(forums);
         }
 
@@ -73,21 +79,34 @@ namespace MyBookStore.Controllers
 
             if (user.Id == forum.CreatorId || isAdmin)
             {
-                return View(forum);
+                var viewModel = new EditForumViewModel
+                {
+                    Id = forum.Id,
+                    Title = forum.Title,
+                    Description = forum.Description
+                };
+                return View(viewModel);
             }
 
             return Forbid();
         }
 
         [HttpPost]
-        public IActionResult Edit(Forum forum)
+        public IActionResult Edit(EditForumViewModel model)
         {
             if (ModelState.IsValid)
             {
+                var forum = _forumService.GetById(model.Id);
+
+                forum.Title = model.Title;
+
+                forum.Description = model.Description;
+
                 _forumService.UpdateForum(forum);
+
                 return RedirectToAction(nameof(Index));
             }
-            return View(forum);
+            return View(model);
         }
 
         public IActionResult Delete(int id)
