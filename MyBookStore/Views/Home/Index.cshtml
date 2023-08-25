@@ -21,8 +21,15 @@
                                 <strong>Author:</strong> @book.Author?.Name <br>
                                 <strong>Published:</strong> @book.PublicationDate.ToString("d") <br>
                                 <strong>Genre:</strong> @book.Genre?.Name <br>
-                                <strong>Price:</strong> $@book.Price
+                                <strong>Price:</strong> $@book.Price <br>
+                                <strong>Average Rating:</strong> <span class="average-rating" data-book-id="@book.Id">@book.AverageRating.ToString("F2")</span> ⭐
                             </p>
+                            <div class="star-rating" data-book-id="@book.Id">
+                                @for (int i = 1; i <= 5; i++)
+                                {
+                                    <span class="star @(i <= book.UserRating ? "filled" : "")" data-value="@i">★</span>
+                                }
+                            </div>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex justify-content-between align-items-center button-container">
                                     <a href='@Url.Action("ViewBook", "Book", new { id = book.Id })' class="btn btn-outline-secondary view-btn">View</a>
@@ -36,6 +43,84 @@
         </div>
     }
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let stars = document.querySelectorAll('.star');
+
+        stars.forEach(function (star) {
+            star.addEventListener('click', function () {
+                let bookId = this.parentElement.getAttribute('data-book-id');
+                let ratingValue = this.getAttribute('data-value');
+
+                // AJAX call
+                sendRating(bookId, ratingValue);
+            });
+
+            // Add hover effect
+            star.addEventListener('mouseover', function () {
+                let parentContainer = this.parentElement;
+                let hoveredValue = parseInt(this.getAttribute('data-value'));
+                let siblingStars = parentContainer.querySelectorAll('.star');
+
+                siblingStars.forEach(s => {
+                    if (parseInt(s.getAttribute('data-value')) <= hoveredValue) {
+                        s.classList.add('hovered');
+                    } else {
+                        s.classList.remove('hovered');
+                    }
+                });
+            });
+
+            star.addEventListener('mouseout', function () {
+                let parentContainer = this.parentElement;
+                let siblingStars = parentContainer.querySelectorAll('.star');
+
+                siblingStars.forEach(s => s.classList.remove('hovered'));
+            });
+        });
+    });
+
+    function sendRating(bookId, ratingValue) {
+        // Here, I'm using the fetch API to make the AJAX call.
+        fetch('/Book/RateBook', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ bookId: bookId, rating: ratingValue })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Thank you for your rating!');
+                    fillStars(bookId, data.rating); // Call the function to fill stars
+                    location.reload();
+                } else {
+                    alert('There was an issue saving your rating.');
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('There was an error sending your rating.');
+            });
+    }
+
+    function fillStars(bookId, rating) {
+        // Get the star-rating div for the specific book
+        let starContainer = document.querySelector(`.star-rating[data-book-id="${bookId}"]`);
+    
+        // Reset all stars
+        starContainer.querySelectorAll('.star').forEach(star => {
+            star.classList.remove('filled');
+        });
+    
+        // Fill the required stars
+        for(let i = 1; i <= rating; i++) {
+            starContainer.querySelector(`.star[data-value="${i}"]`).classList.add('filled');
+        }
+    }
+</script>
 
 <style>
     .book-card 
@@ -117,5 +202,37 @@
     {
         font-weight: 400;
     }
-</style>
 
+    .star 
+    {
+        font-size: 24px;
+        cursor: pointer;
+        transition: color 0.2s, transform 0.2s, text-shadow 0.2s;
+        color: #E0E0E0;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .star-rating 
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .star.filled,
+    .star.hovered 
+    {
+        color: gold;
+        background: -webkit-linear-gradient(45deg, #FFD700, #FFB300);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .star:hover 
+    {
+        transform: scale(1.1);
+        color: gold;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    }
+</style>

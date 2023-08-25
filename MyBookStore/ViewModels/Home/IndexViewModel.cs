@@ -4,7 +4,7 @@ namespace MyBookStore.ViewModels.Home
 {
 	public class IndexViewModel
 	{
-		public List<Book> NewestBooks { get; set; }
+		public IEnumerable<Book> NewestBooks { get; set; }
 
 		public List<Book> BestSellingBooks { get; set; }
 	}

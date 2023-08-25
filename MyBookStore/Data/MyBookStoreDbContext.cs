@@ -40,6 +40,8 @@ namespace MyBookStore.Data
 
         public DbSet<CartItem> CartItems { get; set; }
 
+        public DbSet<BookRating> BookRatings { get; set; }
+
         public DbSet<ApplicationUserLibrary> ApplicationUserLibraries { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

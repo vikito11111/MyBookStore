@@ -15,5 +15,7 @@ namespace MyBookStore.Services.Books
         Book GetBookById(int id);
 
         List<Book> SearchBooks(SearchViewModel searchModel);
+
+
     }
 }

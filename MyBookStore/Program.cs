@@ -48,6 +48,10 @@ builder.Services.AddTransient<ICommentService, CommentService>();
 
 builder.Services.AddTransient<ICartService, CartService>();
 
+builder.Services.AddTransient<IBookRatingService, BookRatingService>();
+
+builder.Services.AddHttpContextAccessor();
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())

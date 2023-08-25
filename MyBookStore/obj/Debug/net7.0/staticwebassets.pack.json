@@ -77,6 +77,10 @@
       "PackagePath": "staticwebassets\\images\\6a1aed85-49cf-4a55-bee8-5185d7c7609e_show.png"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\6b7b11d3-e38e-47ee-84d3-1b187883dab8_image-2023-05-09T235140.126.jpg",
+      "PackagePath": "staticwebassets\\images\\6b7b11d3-e38e-47ee-84d3-1b187883dab8_image-2023-05-09T235140.126.jpg"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\6fd77ec3-5915-473f-b3f0-d775568b57d4_MEME.png",
       "PackagePath": "staticwebassets\\images\\6fd77ec3-5915-473f-b3f0-d775568b57d4_MEME.png"
     },
@@ -97,12 +101,20 @@
       "PackagePath": "staticwebassets\\images\\83dc71c8-0fa1-4bd0-8b4a-749a3d8c1102_MEME by DANIBOI.png"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\88f2ac98-6d8b-47ed-98fc-201721d94d3e_Lost Ark Character.png",
+      "PackagePath": "staticwebassets\\images\\88f2ac98-6d8b-47ed-98fc-201721d94d3e_Lost Ark Character.png"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\9c906b15-e0d2-4e06-877c-a36f8941bcfa_image-2023-05-09T235140.126.jpg",
       "PackagePath": "staticwebassets\\images\\9c906b15-e0d2-4e06-877c-a36f8941bcfa_image-2023-05-09T235140.126.jpg"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\abe29ec2-051f-4bde-86ff-d5c14c286b3b_Lost Ark Character.png",
       "PackagePath": "staticwebassets\\images\\abe29ec2-051f-4bde-86ff-d5c14c286b3b_Lost Ark Character.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\b7ae6b53-7ef2-4d2f-a981-1cccaf9b723d_thedarkurge-800x445.png",
+      "PackagePath": "staticwebassets\\images\\b7ae6b53-7ef2-4d2f-a981-1cccaf9b723d_thedarkurge-800x445.png"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\bcf6de86-7400-4ce7-ba2a-ff91bd85d148_Lost Ark Character.png",
@@ -369,6 +381,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\08c91ad1-7228-4227-bdab-f3724f2132e7_Hand.png",
+      "PackagePath": "staticwebassets\\uploads\\08c91ad1-7228-4227-bdab-f3724f2132e7_Hand.png"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\0e7a11d4-7512-4f98-9076-29124d1d6376_thedarkurge-800x445.png",
       "PackagePath": "staticwebassets\\uploads\\0e7a11d4-7512-4f98-9076-29124d1d6376_thedarkurge-800x445.png"
     },
@@ -399,6 +415,10 @@
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\3039521b-00ad-4b7a-a4a0-f9f0a53e1152_thedarkurge-800x445.png",
       "PackagePath": "staticwebassets\\uploads\\3039521b-00ad-4b7a-a4a0-f9f0a53e1152_thedarkurge-800x445.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\344607d7-5259-4841-81f8-a934265dca7c_image-2023-05-09T235140.126.jpg",
+      "PackagePath": "staticwebassets\\uploads\\344607d7-5259-4841-81f8-a934265dca7c_image-2023-05-09T235140.126.jpg"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\36438738-880f-4b93-be01-6ea64491f1be_image-2023-05-09T235140.126.jpg",
@@ -433,6 +453,18 @@
       "PackagePath": "staticwebassets\\uploads\\6f8b3adb-aeb6-466b-87f5-d284e1455b10_thedarkurge-800x445.png"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\70a74abd-c81d-4a5c-a87f-780e22508def_Screenshot_2020_10_15_14.45.45.0.jpg",
+      "PackagePath": "staticwebassets\\uploads\\70a74abd-c81d-4a5c-a87f-780e22508def_Screenshot_2020_10_15_14.45.45.0.jpg"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\75c98026-3955-4ce8-8881-5e606b9af274_show.png",
+      "PackagePath": "staticwebassets\\uploads\\75c98026-3955-4ce8-8881-5e606b9af274_show.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\77632e46-ff3f-42f6-9528-2c7e1ac61a9f_Hand.png",
+      "PackagePath": "staticwebassets\\uploads\\77632e46-ff3f-42f6-9528-2c7e1ac61a9f_Hand.png"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\7a8d814f-33bb-43b2-b989-9ad612c5b29a_show.png",
       "PackagePath": "staticwebassets\\uploads\\7a8d814f-33bb-43b2-b989-9ad612c5b29a_show.png"
     },
@@ -453,8 +485,16 @@
       "PackagePath": "staticwebassets\\uploads\\89777965-b1ee-428c-a178-ae9d7fed65e2_thedarkurge-800x445.png"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\8bdccad2-a529-4158-bf2f-cb2424bb7992_show.png",
+      "PackagePath": "staticwebassets\\uploads\\8bdccad2-a529-4158-bf2f-cb2424bb7992_show.png"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\8cb3b9ec-01e8-40a1-b29d-7fb8f79ce2e9_thedarkurge-800x445.png",
       "PackagePath": "staticwebassets\\uploads\\8cb3b9ec-01e8-40a1-b29d-7fb8f79ce2e9_thedarkurge-800x445.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\979d3b3f-c23f-4f86-9eec-43cfc329c730_Hand.png",
+      "PackagePath": "staticwebassets\\uploads\\979d3b3f-c23f-4f86-9eec-43cfc329c730_Hand.png"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\a3ca33db-d210-4565-8fda-f825fc0e0e21_show.png",
@@ -469,12 +509,20 @@
       "PackagePath": "staticwebassets\\uploads\\a92529bc-a194-4c50-ab43-1dd714d8a4b8_thedarkurge-800x445.png"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\b20d4beb-f69b-4de4-954e-93ae466f6b83_show.png",
+      "PackagePath": "staticwebassets\\uploads\\b20d4beb-f69b-4de4-954e-93ae466f6b83_show.png"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\b89bf9aa-ef74-42bf-9ff5-e1460d5dc7cf_show.png",
       "PackagePath": "staticwebassets\\uploads\\b89bf9aa-ef74-42bf-9ff5-e1460d5dc7cf_show.png"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\c4d15536-0e3e-4a49-b05a-706bfa692dfa_show.png",
       "PackagePath": "staticwebassets\\uploads\\c4d15536-0e3e-4a49-b05a-706bfa692dfa_show.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\ca7f4515-cc52-4f64-9208-0f8c685f5f1d_thedarkurge-800x445.png",
+      "PackagePath": "staticwebassets\\uploads\\ca7f4515-cc52-4f64-9208-0f8c685f5f1d_thedarkurge-800x445.png"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\d1eaadfd-9e5a-4303-9c9d-a46240c53591_Kayn_8.jpg",
@@ -489,12 +537,20 @@
       "PackagePath": "staticwebassets\\uploads\\d56d6e12-d760-426f-aac5-673bd6f18d4d_show.png"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\ddf27c47-a567-4333-a7aa-bf7947471dc8_show.png",
+      "PackagePath": "staticwebassets\\uploads\\ddf27c47-a567-4333-a7aa-bf7947471dc8_show.png"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\e2b8a9ec-4073-4e35-a6a9-4244b2940505_show.png",
       "PackagePath": "staticwebassets\\uploads\\e2b8a9ec-4073-4e35-a6a9-4244b2940505_show.png"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\e49208b6-037b-4e1d-bc4c-eff8f87634fb_show.png",
       "PackagePath": "staticwebassets\\uploads\\e49208b6-037b-4e1d-bc4c-eff8f87634fb_show.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\e58f0a03-d6ca-43f0-9dd4-1c539e4c8ae2_Screenshot_2020_10_15_14.45.45.0.jpg",
+      "PackagePath": "staticwebassets\\uploads\\e58f0a03-d6ca-43f0-9dd4-1c539e4c8ae2_Screenshot_2020_10_15_14.45.45.0.jpg"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\f2d5a2cc-f0b4-4607-aba0-816a7e599d72_Kayn_8.jpg",
@@ -509,8 +565,16 @@
       "PackagePath": "staticwebassets\\uploads\\f6f416db-bd25-4fc0-98ed-fc649a59e3e0_image_2023-07-18_170619694.ico"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\fdd7d98c-ef83-4350-9f4a-116095908547_Screenshot_2020_10_15_14.45.45.0.jpg",
+      "PackagePath": "staticwebassets\\uploads\\fdd7d98c-ef83-4350-9f4a-116095908547_Screenshot_2020_10_15_14.45.45.0.jpg"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\fdde6788-f9a5-4415-a274-d275eb0e22ad_show.png",
       "PackagePath": "staticwebassets\\uploads\\fdde6788-f9a5-4415-a274-d275eb0e22ad_show.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\febd6607-57c8-4395-9565-52604e556eeb_show.png",
+      "PackagePath": "staticwebassets\\uploads\\febd6607-57c8-4395-9565-52604e556eeb_show.png"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.MyBookStore.Microsoft.AspNetCore.StaticWebAssets.props",

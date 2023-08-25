@@ -26,6 +26,7 @@
                         <p class="card-text">Publisher: @(book.Publisher?.Name ?? "Unknown Publisher")</p>
                         <p class="card-text">Pages: @book.Height</p>
                         <p class="card-text">Price: $@book.Price</p>
+                        <p class="card-text">Average Rating: @book.AverageRating.ToString("F2") ★</p>
                         <a href="@Url.Action("ViewBook", "Book", new { id = book.Id })" class="btn btn-secondary">View</a>
                         <a href="@Url.Action("BuyBook", "Book", new { id = book.Id })" class="btn btn-primary">Buy</a>
                     </div>
@@ -36,35 +37,40 @@
 </div>
 
 <style>
-    .results-title {
+    .results-title 
+    {
         color: #333;
         text-align: center;
         margin: 20px 0;
     }
 
-    .back-button {
+    .back-button 
+    {
         text-align: left;
         margin: 10px;
     }
 
-    .book-card {
+    .book-card 
+    {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
     }
 
-    .book-image {
+    .book-image 
+    {
         width: 100%;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
     }
 
-    .card-title {
+    .card-title 
+    {
         font-size: 1.2em;
         font-weight: bold;
     }
 
-    .card-text {
+    .card-text 
+    {
         margin-bottom: 10px;
     }
 </style>
-

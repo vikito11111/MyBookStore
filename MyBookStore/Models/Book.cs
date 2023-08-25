@@ -45,5 +45,12 @@ namespace MyBookStore.Models
 		public DateTime PublicationDate { get; set; }
 
 		public virtual ICollection<ApplicationUserLibrary> ApplicationUserLibrary { get; set; } = new List<ApplicationUserLibrary>();
-	}
+
+        public decimal AverageRating { get; set; }
+
+        public virtual ICollection<BookRating> Ratings { get; set; } = new List<BookRating>();
+
+        [NotMapped]
+        public int UserRating { get; set; }
+    }
 }
