@@ -71,12 +71,15 @@ namespace MyBookStore.Controllers
             try
             {
                 await _cartService.CheckoutAsync(userId);
+
                 TempData["SuccessMessage"] = "Purchase successful! Books have been added to your library.";
+
                 return RedirectToAction("Index", "Home");
             }
             catch (InvalidOperationException ex)
             {
                 TempData["ErrorMessage"] = ex.Message;
+
                 return RedirectToAction("Index");
             }
         }

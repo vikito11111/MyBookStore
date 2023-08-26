@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nRnwe23rWSM4a6Mst3UbuwRl799PMStzK4IcZ8AK33g=",
+  "Hash": "ABvQ3jnABAVkvzGaPmQWU7f8bSBcIYZFBaEtgRPtTk4=",
   "Source": "MyBookStore",
   "BasePath": "_content/MyBookStore",
   "Mode": "Default",
@@ -1666,6 +1666,23 @@
       "OriginalItemSpec": "wwwroot\\images\\e8820b21-043b-4d0a-9062-f2881e5cac86_Screenshot_2020_10_15_14.45.45.0.jpg"
     },
     {
+      "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\f835d118-ac58-47f0-8204-5d2b680cd210_show.png",
+      "SourceId": "MyBookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\",
+      "BasePath": "_content/MyBookStore",
+      "RelativePath": "images/f835d118-ac58-47f0-8204-5d2b680cd210_show.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\f835d118-ac58-47f0-8204-5d2b680cd210_show.png"
+    },
+    {
       "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\f8e2c6f0-2d26-4508-ba7f-36f9788fcf79_Red Kayn Builds.jfif",
       "SourceId": "MyBookStore",
       "SourceType": "Discovered",
@@ -3162,6 +3179,40 @@
       "OriginalItemSpec": "wwwroot\\uploads\\979d3b3f-c23f-4f86-9eec-43cfc329c730_Hand.png"
     },
     {
+      "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\9dc2c6d5-55c5-4f62-9059-7c1c20bf0dce_show.png",
+      "SourceId": "MyBookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\",
+      "BasePath": "_content/MyBookStore",
+      "RelativePath": "uploads/9dc2c6d5-55c5-4f62-9059-7c1c20bf0dce_show.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\9dc2c6d5-55c5-4f62-9059-7c1c20bf0dce_show.png"
+    },
+    {
+      "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\9dd7bf49-4dc1-4765-af2a-e9943fd3bf05_thedarkurge-800x445.png",
+      "SourceId": "MyBookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\",
+      "BasePath": "_content/MyBookStore",
+      "RelativePath": "uploads/9dd7bf49-4dc1-4765-af2a-e9943fd3bf05_thedarkurge-800x445.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\9dd7bf49-4dc1-4765-af2a-e9943fd3bf05_thedarkurge-800x445.png"
+    },
+    {
       "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\a3ca33db-d210-4565-8fda-f825fc0e0e21_show.png",
       "SourceId": "MyBookStore",
       "SourceType": "Discovered",
@@ -3196,6 +3247,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\a3e295c8-9c8f-45ba-a71c-c76a23b24caa_show.png"
     },
     {
+      "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\a8298288-9a63-46d7-8207-b4bc4adc4d15_show.png",
+      "SourceId": "MyBookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\",
+      "BasePath": "_content/MyBookStore",
+      "RelativePath": "uploads/a8298288-9a63-46d7-8207-b4bc4adc4d15_show.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\a8298288-9a63-46d7-8207-b4bc4adc4d15_show.png"
+    },
+    {
       "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\a92529bc-a194-4c50-ab43-1dd714d8a4b8_thedarkurge-800x445.png",
       "SourceId": "MyBookStore",
       "SourceType": "Discovered",
@@ -3211,6 +3279,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\a92529bc-a194-4c50-ab43-1dd714d8a4b8_thedarkurge-800x445.png"
+    },
+    {
+      "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\aad44bc0-467f-4bba-b066-7729b7117092_Screenshot_2020_10_15_14.45.45.0.jpg",
+      "SourceId": "MyBookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\",
+      "BasePath": "_content/MyBookStore",
+      "RelativePath": "uploads/aad44bc0-467f-4bba-b066-7729b7117092_Screenshot_2020_10_15_14.45.45.0.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\aad44bc0-467f-4bba-b066-7729b7117092_Screenshot_2020_10_15_14.45.45.0.jpg"
     },
     {
       "Identity": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\b20d4beb-f69b-4de4-954e-93ae466f6b83_show.png",

@@ -68,6 +68,12 @@ namespace MyBookStore.Services.Carts
 
         public async Task CheckoutAsync(string userId)
         {
+            const decimal SUPER_MEMBER_DISCOUNT = 0.15m;
+
+            const decimal SUPER_MEMBER_THRESHOLD = 200;
+
+            decimal discount = 0;
+
             var cart = await _context.Carts
                 .Include(c => c.CartItems)
                 .ThenInclude(ci => ci.Book)
@@ -75,12 +81,19 @@ namespace MyBookStore.Services.Carts
 
             var user = await _userManager.FindByIdAsync(userId);
 
-            if (user.Balance < cart.TotalPrice)
+            if (await _userManager.IsInRoleAsync(user, "Super-Member"))
+            {
+                discount = cart.TotalPrice * SUPER_MEMBER_DISCOUNT;
+            }
+
+            decimal finalPrice = cart.TotalPrice - discount;
+
+            if (user.Balance < finalPrice)
             {
                 throw new InvalidOperationException("Insufficient balance. Please top up your account.");
             }
 
-            user.Balance -= cart.TotalPrice;
+            user.Balance -= finalPrice;
 
             foreach (var cartItem in cart.CartItems)
             {
@@ -91,6 +104,32 @@ namespace MyBookStore.Services.Carts
                 };
 
                 _context.ApplicationUserLibraries.Add(userLibraryItem);
+            }
+
+            user.SpentMoney += finalPrice;
+
+            if (await _userManager.IsInRoleAsync(user, "Super-Member"))
+            {
+                user.SuperMemberPurchasesCount += 1;
+
+                if (user.SuperMemberPurchasesCount >= 5)
+                {
+                    await _userManager.RemoveFromRoleAsync(user, "Super-Member");
+
+                    await _userManager.AddToRoleAsync(user, "Member");
+
+                    user.SuperMemberPurchasesCount = 0;
+
+                    user.SpentMoney = 0;
+                }
+            }
+            else if (user.SpentMoney >= SUPER_MEMBER_THRESHOLD && !await _userManager.IsInRoleAsync(user, "Super-Member"))
+            {
+                await _userManager.AddToRoleAsync(user, "Super-Member");
+
+                user.SuperMemberPurchasesCount = 0;
+
+                await _userManager.RemoveFromRoleAsync(user, "Member");
             }
 
             _context.CartItems.RemoveRange(cart.CartItems);
@@ -131,6 +170,20 @@ namespace MyBookStore.Services.Carts
                     }
                 }).ToList()
             };
+
+            var user = await _userManager.FindByIdAsync(userId);
+
+            if (user != null)
+            {
+                var roles = await _userManager.GetRolesAsync(user);
+
+                if (roles.Contains("Super-Member"))
+                {
+                    cartViewModel.IsSuperMember = true;
+
+                    cartViewModel.DiscountedTotalPrice = cartViewModel.TotalPrice * 0.85m;
+                }
+            }
 
             return cartViewModel;
         }

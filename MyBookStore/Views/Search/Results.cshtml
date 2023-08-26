@@ -28,7 +28,7 @@
                         <p class="card-text">Price: $@book.Price</p>
                         <p class="card-text">Average Rating: @book.AverageRating.ToString("F2") ★</p>
                         <a href="@Url.Action("ViewBook", "Book", new { id = book.Id })" class="btn btn-secondary">View</a>
-                        <a href="@Url.Action("BuyBook", "Book", new { id = book.Id })" class="btn btn-primary">Buy</a>
+                        <a href="@Url.Action("AddToCart", "Cart", new { bookId = book.Id })" class="btn btn-primary buy-btn">Buy</a>
                     </div>
                 </div>
             </div>

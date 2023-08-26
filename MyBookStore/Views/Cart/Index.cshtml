@@ -47,7 +47,15 @@
             </tbody>
         </table>
         <div class="text-right">
-            <h3>Total: @Model.TotalPrice.ToString("C")</h3>
+            @if (Model.IsSuperMember)
+            {
+                <h4 class="text-muted" style="text-decoration: line-through;">Original Total: @Model.TotalPrice.ToString("C")</h4>
+                <h3>Discounted Total: @Model.DiscountedTotalPrice.ToString("C")</h3>
+            }
+            else
+            {
+                <h3>Total: @Model.TotalPrice.ToString("C")</h3>
+            }
             <form method="post" action="@Url.Action("Checkout", "Cart")">
                 <button type="submit" class="btn btn-success">Checkout</button>
             </form>

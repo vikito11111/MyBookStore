@@ -145,6 +145,10 @@
       "PackagePath": "staticwebassets\\images\\e8820b21-043b-4d0a-9062-f2881e5cac86_Screenshot_2020_10_15_14.45.45.0.jpg"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\f835d118-ac58-47f0-8204-5d2b680cd210_show.png",
+      "PackagePath": "staticwebassets\\images\\f835d118-ac58-47f0-8204-5d2b680cd210_show.png"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\f8e2c6f0-2d26-4508-ba7f-36f9788fcf79_Red Kayn Builds.jfif",
       "PackagePath": "staticwebassets\\images\\f8e2c6f0-2d26-4508-ba7f-36f9788fcf79_Red Kayn Builds.jfif"
     },
@@ -497,6 +501,14 @@
       "PackagePath": "staticwebassets\\uploads\\979d3b3f-c23f-4f86-9eec-43cfc329c730_Hand.png"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\9dc2c6d5-55c5-4f62-9059-7c1c20bf0dce_show.png",
+      "PackagePath": "staticwebassets\\uploads\\9dc2c6d5-55c5-4f62-9059-7c1c20bf0dce_show.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\9dd7bf49-4dc1-4765-af2a-e9943fd3bf05_thedarkurge-800x445.png",
+      "PackagePath": "staticwebassets\\uploads\\9dd7bf49-4dc1-4765-af2a-e9943fd3bf05_thedarkurge-800x445.png"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\a3ca33db-d210-4565-8fda-f825fc0e0e21_show.png",
       "PackagePath": "staticwebassets\\uploads\\a3ca33db-d210-4565-8fda-f825fc0e0e21_show.png"
     },
@@ -505,8 +517,16 @@
       "PackagePath": "staticwebassets\\uploads\\a3e295c8-9c8f-45ba-a71c-c76a23b24caa_show.png"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\a8298288-9a63-46d7-8207-b4bc4adc4d15_show.png",
+      "PackagePath": "staticwebassets\\uploads\\a8298288-9a63-46d7-8207-b4bc4adc4d15_show.png"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\a92529bc-a194-4c50-ab43-1dd714d8a4b8_thedarkurge-800x445.png",
       "PackagePath": "staticwebassets\\uploads\\a92529bc-a194-4c50-ab43-1dd714d8a4b8_thedarkurge-800x445.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\aad44bc0-467f-4bba-b066-7729b7117092_Screenshot_2020_10_15_14.45.45.0.jpg",
+      "PackagePath": "staticwebassets\\uploads\\aad44bc0-467f-4bba-b066-7729b7117092_Screenshot_2020_10_15_14.45.45.0.jpg"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\uploads\\b20d4beb-f69b-4de4-954e-93ae466f6b83_show.png",
