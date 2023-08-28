@@ -16,6 +16,8 @@ namespace MyBookStore.Services.Books
 
         List<Book> SearchBooks(SearchViewModel searchModel);
 
+        public IEnumerable<Book> GetRecommendedBooksForUser(string userId);
 
+        public IEnumerable<Book> GetBooksBySameAuthorExcludingUserLibrary(string userId, int? lastBoughtBookId = null);
     }
 }

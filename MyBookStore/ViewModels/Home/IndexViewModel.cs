@@ -6,6 +6,10 @@ namespace MyBookStore.ViewModels.Home
 	{
 		public IEnumerable<Book> NewestBooks { get; set; }
 
-		public List<Book> BestSellingBooks { get; set; }
+		public IEnumerable<Book> RecommendedBooks { get; set; }
+
+        public IEnumerable<Book> BooksBySameAuthor { get; set; }
+
+        public List<Book> BestSellingBooks { get; set; }
 	}
 }

@@ -5,6 +5,7 @@ using MyBookStore.Data;
 using MyBookStore.Models;
 using MyBookStore.ViewModels.Admin;
 using MyBookStore.ViewModels.Search;
+using System.Linq;
 
 namespace MyBookStore.Services.Books
 {
@@ -78,6 +79,44 @@ namespace MyBookStore.Services.Books
             return book;
         }
 
+        public IEnumerable<Book> GetBooksBySameAuthorExcludingUserLibrary(string userId, int? lastBoughtBookId = null)
+        {
+            if (lastBoughtBookId == null)
+            {
+                var lastBook = _context.ApplicationUserLibraries
+                    .Where(x => x.ApplicationUserId == userId)
+                    .OrderByDescending(x => x.BookId)
+                    .Select(x => x.Book)
+                    .FirstOrDefault();
+
+                if (lastBook != null)
+                {
+                    lastBoughtBookId = lastBook.Id;
+                }
+                else
+                {
+                    return new List<Book>();
+                }
+            }
+
+            var authorId = _context.Books
+                .Where(b => b.Id == lastBoughtBookId)
+                .Select(b => b.Author.Id)
+                .FirstOrDefault();
+
+            var userLibraryBookIds = _context.ApplicationUserLibraries
+                .Where(x => x.ApplicationUserId == userId)
+                .Select(x => x.BookId)
+                .ToList();
+
+            var recommendedBooks = _context.Books
+                .Where(b => b.Author.Id == authorId && !userLibraryBookIds.Contains(b.Id))
+                .OrderBy(r => Guid.NewGuid())
+                .ToList();
+
+            return recommendedBooks;
+        }
+
         public List<Book> GetNewestBooks()
         {
             var currentUserId = _userManager.GetUserId(_httpContextAccessor.HttpContext.User);
@@ -103,6 +142,24 @@ namespace MyBookStore.Services.Books
                 .ToList();
 
             return newestBooks;
+        }
+
+        public IEnumerable<Book> GetRecommendedBooksForUser(string userId)
+        {
+            var userBooks = _context.ApplicationUserLibraries
+                .Where(lib => lib.ApplicationUserId == userId)
+                .Select(lib => lib.Book)
+                .ToList();
+
+            var userGenreIds = userBooks.Select(b => b.Genre.Id).Distinct().ToList();
+
+            var recommendedBooks = _context.Books
+                .Where(b => userGenreIds.Contains(b.Genre.Id) && !userBooks.Contains(b))
+                .OrderBy(r => Guid.NewGuid())
+                .Take(10)
+                .ToList();
+
+            return recommendedBooks;
         }
 
         public List<Book> SearchBooks(SearchViewModel searchModel)

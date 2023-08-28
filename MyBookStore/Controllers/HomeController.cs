@@ -13,13 +13,13 @@ namespace MyBookStore.Controllers
 	{
 		private readonly IBookService _bookService;
 		private readonly ILogger<HomeController> _logger;
-        private readonly MyBookStoreDbContext _db;
+        private readonly MyBookStoreDbContext _context;
         private const int MaxBooksToShow = 5;
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public HomeController(IBookService bookService, ILogger<HomeController> logger, UserManager<ApplicationUser> userManager, MyBookStoreDbContext db) : base(userManager, db)
+        public HomeController(IBookService bookService, ILogger<HomeController> logger, UserManager<ApplicationUser> userManager, MyBookStoreDbContext context) : base(userManager, context)
         {
-			_db = db;
+			_context = context;
 			_logger = logger;
 			_bookService = bookService;
 			_userManager = userManager;
@@ -38,6 +38,15 @@ namespace MyBookStore.Controllers
             {
                 NewestBooks = newestBooks,
             };
+
+			if (User.Identity.IsAuthenticated)
+			{
+				var userId = _userManager.GetUserId(User);
+
+				model.RecommendedBooks = _bookService.GetRecommendedBooksForUser(userId);
+
+                model.BooksBySameAuthor = _bookService.GetBooksBySameAuthorExcludingUserLibrary(userId);
+            }
 
             return View(model);
         }

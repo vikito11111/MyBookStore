@@ -42,6 +42,79 @@
             }
         </div>
     }
+
+    @if (Model.RecommendedBooks?.Any() == true)
+    {
+        <h2 class="mb-4">Recommended Books For You</h2>
+        <div class="row">
+            @foreach (var book in Model.RecommendedBooks)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="book-card card">
+                        <img class="card-img-top book-image" src="@book.CoverImage" alt="Book cover image">
+                        <div class="card-body">
+                            <h5 class="card-title">@book.Title</h5>
+                            <p class="card-text">
+                                <strong>Author:</strong> @book.Author?.Name <br>
+                                <strong>Published:</strong> @book.PublicationDate.ToString("d") <br>
+                                <strong>Genre:</strong> @book.Genre?.Name <br>
+                                <strong>Price:</strong> $@book.Price <br>
+                                <strong>Average Rating:</strong> <span class="average-rating" data-book-id="@book.Id">@book.AverageRating.ToString("F2")</span> ⭐
+                            </p>
+                            <div class="star-rating" data-book-id="@book.Id">
+                                @for (int i = 1; i <= 5; i++)
+                                {
+                                    <span class="star @(i <= book.UserRating ? "filled" : "")" data-value="@i">★</span>
+                                }
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-between align-items-center button-container">
+                                    <a href='@Url.Action("ViewBook", "Book", new { id = book.Id })' class="btn btn-outline-secondary view-btn">View</a>
+                                    <a href="@Url.Action("AddToCart", "Cart", new { bookId = book.Id })" class="btn btn-primary buy-btn">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    @if (Model.BooksBySameAuthor?.Any() == true)
+    {
+        <h2 class="mb-4">More books by @Model.BooksBySameAuthor.FirstOrDefault().Author?.Name</h2>
+        <div class="row">
+            @foreach (var book in Model.BooksBySameAuthor)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="book-card card">
+                        <img class="card-img-top book-image" src="@book.CoverImage" alt="Book cover image">
+                        <div class="card-body">
+                            <h5 class="card-title">@book.Title</h5>
+                            <p class="card-text">
+                                <strong>Author:</strong> @book.Author?.Name <br>
+                                <strong>Published:</strong> @book.PublicationDate.ToString("d") <br>
+                                <strong>Genre:</strong> @book.Genre?.Name <br>
+                                <strong>Price:</strong> $@book.Price <br>
+                                <strong>Average Rating:</strong> <span class="average-rating" data-book-id="@book.Id">@book.AverageRating.ToString("F2")</span> ⭐
+                            </p>
+                            <div class="star-rating" data-book-id="@book.Id">
+                                @for (int i = 1; i <= 5; i++)
+                                {
+                                    <span class="star @(i <= book.UserRating ? "filled" : "")" data-value="@i">★</span>
+                                }
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-between align-items-center button-container">
+                                    <a href='@Url.Action("ViewBook", "Book", new { id = book.Id })' class="btn btn-outline-secondary view-btn">View</a>
+                                    <a href="@Url.Action("AddToCart", "Cart", new { bookId = book.Id })" class="btn btn-primary buy-btn">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
 </div>
 
 <script>
