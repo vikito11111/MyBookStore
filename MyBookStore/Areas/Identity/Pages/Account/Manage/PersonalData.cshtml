@@ -1,0 +1,151 @@
+﻿@page
+@model PersonalDataModel
+
+@{
+    ViewData["Title"] = "Personal Data";
+    ViewData["ActivePage"] = ManageNavPages.PersonalData;
+}
+
+<div class="container mt-5">
+    <div class="title-container">
+        <h3 class="title">@ViewData["Title"]</h3>
+    </div>
+    <div class="profile-card">
+        <div class="d-flex align-items-center mb-4">
+            <div class="profile-image">
+                <img src="@Model.ProfilePictureUrl" alt="Profile Picture">
+            </div>
+        </div>
+        <div class="profile-details">
+
+            <div class="basic-details">
+                <div class="detail-item mb-3">
+                    <strong class="text-uppercase text-muted">Full Name:</strong>
+                    <span class="text-dark ml-3">@Model.FullName</span>
+                </div>
+                <div class="detail-item mb-3">
+                    <strong class="text-uppercase text-muted">Email:</strong>
+                    <span class="text-dark ml-3">@Model.Email</span>
+                </div>
+            </div>
+
+            <div class="additional-details" style="display: none;">
+                <div class="detail-item mb-3">
+                    <strong class="text-uppercase text-muted">Mobile Phone:</strong>
+                    <span class="text-dark ml-3">@Model.PhoneNumber</span>
+                </div>
+                <div class="detail-item mb-3">
+                    <strong class="text-uppercase text-muted">Role:</strong>
+                    <span class="text-dark ml-3">@Model.ApplicationRole</span>
+                </div>
+                <div class="detail-item mb-3">
+                    <strong class="text-uppercase text-muted">Balance:</strong>
+                    <span class="text-dark ml-3">@Model.Balance$</span>
+                </div>
+                <div class="detail-item mb-3">
+                    <strong class="text-uppercase text-muted">Number of Books:</strong>
+                    <span class="text-dark ml-3">@Model.NumberOfBooks</span>
+                </div>
+            </div>
+
+            <button id="toggleDetails" class="btn btn-primary mt-3">Show More</button>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        document.getElementById('toggleDetails').addEventListener('click', function () {
+            let details = document.querySelector('.additional-details');
+            let button = document.getElementById('toggleDetails');
+            if (details.style.display === "none") {
+                details.style.display = "block";
+                button.innerText = "Show Less";
+            } else {
+                details.style.display = "none";
+                button.innerText = "Show More";
+            }
+        });
+    </script>
+}
+
+<style>
+    .profile-card 
+    {
+        transition: transform .3s, box-shadow .3s;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+        padding: 20px;
+        border-radius: 15px;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+
+    .profile-card:hover 
+    {
+        transform: translateY(-5px);
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-image img 
+    {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .text-uppercase.text-muted 
+    {
+        font-size: 1.1em;
+    }
+
+    .text-dark 
+    {
+        font-size: 1.3em;
+    }
+
+    .btn-primary 
+    {
+        background-color: #6c5ce7;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        padding: 10px 20px;
+        color: white;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn-primary:hover 
+    {
+        background-color: #4f41d4;
+        transform: translateY(-2px);
+    }
+
+    .btn-primary:focus 
+    {
+        outline: none;
+    }
+
+    .title-container 
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        background: linear-gradient(135deg, #c3cfe2 0%, #f5f7fa 100%);
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .title 
+    {
+        font-size: 2em;
+        font-weight: 700;
+        color: #5b6670;
+        position: relative;
+        padding: 0 15px;
+        font-style: italic
+    }
+</style>

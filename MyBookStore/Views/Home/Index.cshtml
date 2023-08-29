@@ -1,4 +1,5 @@
 ﻿@model MyBookStore.ViewModels.Home.IndexViewModel
+
 @{
     ViewBag.Title = "Home Page";
 }
@@ -196,84 +197,44 @@
 </script>
 
 <style>
+    .container 
+    {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
     .book-card 
     {
+        border: 1px solid #e2e2e2;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
 
     .book-card:hover 
     {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     }
 
-    .book-image 
+    h1, h2, h3, h4, h5, h6 
     {
-        max-height: 250px;
-        object-fit: cover;
-        border-top-left-radius: .25rem;
-        border-top-right-radius: .25rem;
+        font-weight: 600;
+        color: #333;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.02);
     }
 
-    .button-container .btn-primary, .button-container .view-btn 
+    h1.display-4 
     {
-        padding: 10px 20px;
-        border-radius: 25px;
-        font-weight: bold;
-        transition: all 0.3s ease-in-out;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-bottom: 2px solid #737370;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
     }
 
-    .button-container .btn-primary 
+    h2 
     {
-        background-image: linear-gradient(to right, #FF5733, #FF8A33);
-        border: none;
-        color: white;
-    }
-
-    .button-container .btn-primary:hover 
-    {
-        background-image: linear-gradient(to right, #FF8A33, #FF5733);
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-        transform: translateY(-2px);
-    }
-
-    .button-container .btn-primary:active 
-    {
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transform: translateY(1px);
-    }
-
-    .button-container .view-btn 
-    {
-        color: #FF5733;
-        border: 2px solid #FF5733;
-    }
-
-    .button-container .view-btn:hover 
-    {
-        color: white;
-        background-color: #FF5733;
-        border-color: #FF5733;
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-        transform: translateY(-2px);
-    }
-
-    .button-container .view-btn:active 
-    {
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transform: translateY(1px);
-    }
-
-    .card-text 
-    {
-        margin-bottom: 1rem;
-    }
-
-    .display-4 
-    {
-        font-weight: 400;
+        font-size: 24px;
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #d8d8d8;
     }
 
     .star 
@@ -281,8 +242,8 @@
         font-size: 24px;
         cursor: pointer;
         transition: color 0.2s, transform 0.2s, text-shadow 0.2s;
-        color: #E0E0E0;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        color: #f2f2f2;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     }
 
     .star-rating 
@@ -296,16 +257,41 @@
     .star.hovered 
     {
         color: gold;
-        background: -webkit-linear-gradient(45deg, #FFD700, #FFB300);
+        background: linear-gradient(45deg, #FFD700, #FFB300);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     }
 
     .star:hover 
     {
         transform: scale(1.1);
         color: gold;
-        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .button-container .btn-primary, .button-container .view-btn 
+    {
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .button-container .btn-primary:hover 
+    {
+        background-image: linear-gradient(to right, #FF8A33, #FF5733);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        transform: translateY(-2px);
+    }
+
+    .button-container .view-btn:hover 
+    {
+        color: white;
+        background-color: #FF5733;
+        border-color: #FF5733;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        transform: translateY(-2px);
     }
 </style>
