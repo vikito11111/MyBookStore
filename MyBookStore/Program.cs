@@ -50,6 +50,10 @@ builder.Services.AddTransient<ICartService, CartService>();
 
 builder.Services.AddTransient<IBookRatingService, BookRatingService>();
 
+builder.Services.AddTransient<IAuthorViewModelService, AuthorViewModelService>();
+
+builder.Services.AddTransient<IPublisherViewModelService, PublisherViewModelService>();
+
 builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();

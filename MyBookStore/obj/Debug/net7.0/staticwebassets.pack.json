@@ -21,8 +21,16 @@
       "PackagePath": "staticwebassets\\images\\00afc226-1419-41bd-8392-92ad948ccd8c_thedarkurge-800x445.png"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\01413a7b-c095-4b3a-a318-cce6cd13f504_Shadow Assassin.jpg",
+      "PackagePath": "staticwebassets\\images\\01413a7b-c095-4b3a-a318-cce6cd13f504_Shadow Assassin.jpg"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\02417842-d003-4e59-9678-a0bb5f5d29ea_show.png",
       "PackagePath": "staticwebassets\\images\\02417842-d003-4e59-9678-a0bb5f5d29ea_show.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\04adb733-6c2d-4cc0-bd46-3a5b541dce6b_64026015_p0.jpg",
+      "PackagePath": "staticwebassets\\images\\04adb733-6c2d-4cc0-bd46-3a5b541dce6b_64026015_p0.jpg"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\071c001e-d0c1-487e-aff1-ded4438a92ae_thedarkurge-800x445.png",
@@ -37,16 +45,32 @@
       "PackagePath": "staticwebassets\\images\\0e17b6ea-70c4-4fda-83d1-b6a365e227af_image-2023-05-09T235140.126.jpg"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\155567dd-91cf-4db9-8953-6c6fc22889da_Kayn_8.jpg",
+      "PackagePath": "staticwebassets\\images\\155567dd-91cf-4db9-8953-6c6fc22889da_Kayn_8.jpg"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\198876c7-4fb0-4872-9767-daf5485376db_thedarkurge-800x445.png",
       "PackagePath": "staticwebassets\\images\\198876c7-4fb0-4872-9767-daf5485376db_thedarkurge-800x445.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\290d6962-4401-4bc7-947a-351ca39626e0_c10855181736a92eb8ad14e79d530e79.jpg",
+      "PackagePath": "staticwebassets\\images\\290d6962-4401-4bc7-947a-351ca39626e0_c10855181736a92eb8ad14e79d530e79.jpg"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\2948b24d-7012-4685-bfd5-1d9d443ce3c2_Red Kayn Builds.jfif",
       "PackagePath": "staticwebassets\\images\\2948b24d-7012-4685-bfd5-1d9d443ce3c2_Red Kayn Builds.jfif"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\2c5089c4-cd91-4f20-9f7a-04a03c8ab433_thedarkurge-800x445.png",
+      "PackagePath": "staticwebassets\\images\\2c5089c4-cd91-4f20-9f7a-04a03c8ab433_thedarkurge-800x445.png"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\3c8015da-13bf-4040-9d80-5efc999eedf9_Screenshot_2020_10_15_14.45.45.0.jpg",
       "PackagePath": "staticwebassets\\images\\3c8015da-13bf-4040-9d80-5efc999eedf9_Screenshot_2020_10_15_14.45.45.0.jpg"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\3d9b3691-f5fa-41fa-bcad-42df0d59290b_c10855181736a92eb8ad14e79d530e79.jpg",
+      "PackagePath": "staticwebassets\\images\\3d9b3691-f5fa-41fa-bcad-42df0d59290b_c10855181736a92eb8ad14e79d530e79.jpg"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\3e641d63-06f1-4f46-822f-1dc40c02d853_thedarkurge-800x445.png",
@@ -59,6 +83,14 @@
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\423694c1-b1d4-447a-81a2-197da060e44e_Gwent Account.png",
       "PackagePath": "staticwebassets\\images\\423694c1-b1d4-447a-81a2-197da060e44e_Gwent Account.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\4f8f7c14-88a1-4791-ac4f-4c3e6eae9a0b_show.png",
+      "PackagePath": "staticwebassets\\images\\4f8f7c14-88a1-4791-ac4f-4c3e6eae9a0b_show.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\525fc61c-0ab7-4af0-bccd-3b7e4d811ca9_NgPBehiRFOVLyGy-5npKCbgA9tkn5oOW48LLFXwvjcM.webp",
+      "PackagePath": "staticwebassets\\images\\525fc61c-0ab7-4af0-bccd-3b7e4d811ca9_NgPBehiRFOVLyGy-5npKCbgA9tkn5oOW48LLFXwvjcM.webp"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\531453e8-afda-4838-8977-68b228c416fe_Screenshot_2020_10_15_14.45.45.0.jpg",
@@ -109,8 +141,20 @@
       "PackagePath": "staticwebassets\\images\\88f2ac98-6d8b-47ed-98fc-201721d94d3e_Lost Ark Character.png"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\96791620-8928-4bdf-b527-ded4aec768a2_Red Kayn Builds.jfif",
+      "PackagePath": "staticwebassets\\images\\96791620-8928-4bdf-b527-ded4aec768a2_Red Kayn Builds.jfif"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\9b194858-e6ed-4733-a319-d9146067e127_image-2023-05-09T235140.126.jpg",
+      "PackagePath": "staticwebassets\\images\\9b194858-e6ed-4733-a319-d9146067e127_image-2023-05-09T235140.126.jpg"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\9c906b15-e0d2-4e06-877c-a36f8941bcfa_image-2023-05-09T235140.126.jpg",
       "PackagePath": "staticwebassets\\images\\9c906b15-e0d2-4e06-877c-a36f8941bcfa_image-2023-05-09T235140.126.jpg"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\9ea41b50-b0c8-4444-8d3b-3517d7a3db80_Kayn.jpg",
+      "PackagePath": "staticwebassets\\images\\9ea41b50-b0c8-4444-8d3b-3517d7a3db80_Kayn.jpg"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\abe29ec2-051f-4bde-86ff-d5c14c286b3b_Lost Ark Character.png",
@@ -119,6 +163,10 @@
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\b07e4eb4-f97a-443f-99de-d37651e4c9b2_Lost Ark Character.png",
       "PackagePath": "staticwebassets\\images\\b07e4eb4-f97a-443f-99de-d37651e4c9b2_Lost Ark Character.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\b1e55aed-ad6a-40eb-b450-99c4cc1f8f8f_Lost Ark Character.png",
+      "PackagePath": "staticwebassets\\images\\b1e55aed-ad6a-40eb-b450-99c4cc1f8f8f_Lost Ark Character.png"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\b7ae6b53-7ef2-4d2f-a981-1cccaf9b723d_thedarkurge-800x445.png",
@@ -145,8 +193,24 @@
       "PackagePath": "staticwebassets\\images\\d242c3a3-314f-4be6-b00c-4497c32954a0_Screenshot_2020_10_15_14.45.45.0.jpg"
     },
     {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\d71b5f99-c482-4039-b24f-eebe9af9c4ea_Pro Rank.png",
+      "PackagePath": "staticwebassets\\images\\d71b5f99-c482-4039-b24f-eebe9af9c4ea_Pro Rank.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\d7dab545-2d43-4c41-8dad-a311a41e0652_Lost Ark Character.png",
+      "PackagePath": "staticwebassets\\images\\d7dab545-2d43-4c41-8dad-a311a41e0652_Lost Ark Character.png"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\d8a09dff-1441-4bad-8ef7-bdd0b9bc4299_NgPBehiRFOVLyGy-5npKCbgA9tkn5oOW48LLFXwvjcM.webp",
+      "PackagePath": "staticwebassets\\images\\d8a09dff-1441-4bad-8ef7-bdd0b9bc4299_NgPBehiRFOVLyGy-5npKCbgA9tkn5oOW48LLFXwvjcM.webp"
+    },
+    {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\db28f833-9a31-4b09-9eee-8733e9ecf881_Screenshot_2020_10_15_14.45.45.0.jpg",
       "PackagePath": "staticwebassets\\images\\db28f833-9a31-4b09-9eee-8733e9ecf881_Screenshot_2020_10_15_14.45.45.0.jpg"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\e02fa2a0-8375-4d75-bb50-5c40453471fa_thedarkurge-800x445.png",
+      "PackagePath": "staticwebassets\\images\\e02fa2a0-8375-4d75-bb50-5c40453471fa_thedarkurge-800x445.png"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\e180b4d7-9254-419a-8f2b-62760fbf3933_thedarkurge-800x445.png",
@@ -155,6 +219,10 @@
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\e8820b21-043b-4d0a-9062-f2881e5cac86_Screenshot_2020_10_15_14.45.45.0.jpg",
       "PackagePath": "staticwebassets\\images\\e8820b21-043b-4d0a-9062-f2881e5cac86_Screenshot_2020_10_15_14.45.45.0.jpg"
+    },
+    {
+      "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\f30a30d2-7b04-4e01-8816-fe004daca66e_Screenshot_2020_10_15_14.45.45.0.jpg",
+      "PackagePath": "staticwebassets\\images\\f30a30d2-7b04-4e01-8816-fe004daca66e_Screenshot_2020_10_15_14.45.45.0.jpg"
     },
     {
       "Id": "D:\\MyBookStore\\MyBookStore\\MyBookStore\\wwwroot\\images\\f44b9d16-e654-47f0-bfb2-cb8f454adc7f_MEME by DANIBOI.png",

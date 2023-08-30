@@ -1,4 +1,5 @@
-﻿using MyBookStore.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using MyBookStore.Data;
 using MyBookStore.Models;
 using MyBookStore.ViewModels.Admin;
 using System.Security.Policy;
@@ -17,14 +18,13 @@ namespace MyBookStore.Services.Publishers
             _hostingEnvironment = hostingEnvironment;
         }
 
-        public bool AddPublisher(AddPublisherViewModel model, out string errorMessage)
+        public async Task<(bool isSuccess, string errorMessage)> AddPublisherAsync(AddPublisherViewModel model)
         {
             var existingPublisher = _context.Publishers.FirstOrDefault(p => p.Name == model.Name);
 
             if (existingPublisher != null)
             {
-                errorMessage = "A publisher with the same name already exists.";
-                return false;
+                return (false, "An author with the same name already exists.");
             }
 
             try
@@ -48,24 +48,28 @@ namespace MyBookStore.Services.Publishers
 
                     using (var fileStream = new FileStream(filePath, FileMode.Create))
                     {
-                        model.Image.CopyToAsync(fileStream);
+                        await model.Image.CopyToAsync(fileStream);
                     }
 
-                    publisher.Image = "/publisher/" + uniqueFileName;
+                    publisher.Image = "/images/" + uniqueFileName;
                 }
 
                 _context.Publishers.Add(publisher);
                 _context.SaveChanges();
 
-                errorMessage = string.Empty;
-                return true;
+                return (true, string.Empty);
             }
             catch (Exception ex)
             {
-                errorMessage = ex.Message;
-
-                return false;
+                return (false, ex.Message);
             }
+        }
+
+        public async Task<Publisher> GetPublisherById(int id)
+        {
+            return await _context.Publishers
+                .Include(a => a.Books)
+                .FirstOrDefaultAsync(a => a.Id == id);
         }
     }
 }

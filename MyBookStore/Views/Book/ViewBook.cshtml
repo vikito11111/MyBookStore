@@ -4,17 +4,14 @@
     ViewBag.Title = Model.Title;
 }
 
-<div class="back-button">
-    <button onclick="goBack()" class="btn btn-outline-primary">
-        <i class="fas fa-arrow-left"></i> Back
-    </button>
-</div>
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Open+Sans:400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
-<script>
-    function goBack() {
-        window.location.href = '@Url.Action("Index", "Home")';
-    }
-</script>
+<div class="back-button">
+    <a href="@Url.Action("Index", "Home")" class="btn btn-outline-primary">
+        <i class="fas fa-arrow-left"></i> Back
+    </a>
+</div>
 
 <div class="book-view container">
     <h2>@Model.Title</h2>
@@ -23,42 +20,84 @@
             <img src="@Model.CoverImage" alt="Book cover image" class="book-image">
         </div>
         <div class="col-md-6">
-            <p><strong>Author:</strong> @Model.Author.Name</p>
-            <p><strong>Genre:</strong> @Model.Genre.Name</p>
-            <p><strong>Published:</strong> @Model.PublicationDate.ToString("d")</p>
-            <p><strong>Publisher:</strong> @Model.Publisher.Name</p>
-            <p><strong>Pages:</strong> @Model.Height</p>
-            <p><strong>Price:</strong> @Model.Price$</p>
+            <p><i class="fas fa-user icon-black"></i> <a class="link-black" href="@Url.Action("Details", "Author", new { id = Model.Author.Id })"> <strong class="text-black">Author:</strong> @Model.Author.Name</a></p>
+            <p><i class="fas fa-building icon-black"></i> <a class="link-black" href="@Url.Action("Details", "Publisher", new { id = Model.Publisher.Id })"> <strong>Publisher:</strong> @Model.Publisher.Name</a></p>
+            <p><i class="fas fa-book-open icon-black"></i> <strong class="text-black">Genre:</strong> @Model.Genre.Name</p>
+            <p><i class="fas fa-file-alt icon-black"></i> <strong class="text-black">Pages:</strong> @Model.Height</p>
+            <p><i class="fas fa-dollar-sign icon-black"></i> <strong class="text-black">Price:</strong> @Model.Price$</p>
             <div class="button-container">
-                <a href="@Url.Action("AddToCart", "Cart", new { bookId = Model.Id })" class="btn btn-primary">Buy</a>
+                <a href="@Url.Action("AddToCart", "Cart", new { bookId = Model.Id })" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Buy</a>
             </div>
         </div>
     </div>
 </div>
 
 <style>
-    .back-button {
+    body 
+    {
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    h1, h2, h3, h4, h5 
+    {
+        color: #000000;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .back-button 
+    {
         text-align: left;
-        margin: 10px;
+        margin: 10px 0;
     }
 
-    .book-view {
+    .book-view 
+    {
         margin: 20px;
+        padding: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
     }
 
-    .book-view h2 {
+    .book-view .link-black 
+    {
+        color: black;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .book-view .link-black:hover 
+    {
+        color: #555;
+    }
+
+    .book-view h2 
+    {
         color: #333;
         margin-bottom: 20px;
     }
 
-    .book-image {
+    .book-image 
+    {
         width: 100%;
-        max-width: 560px;
+        max-width: 500px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
         border-radius: 5px;
     }
 
-    .button-container .btn-primary 
+    .book-image:hover 
+    {
+        transform: scale(1.05);
+    }
+
+    .book-view p 
+    {
+        color: black;
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .btn-primary 
     {
         background-image: linear-gradient(to right, #FF5733, #FF8A33);
         border: none;
@@ -70,20 +109,21 @@
         font-weight: bold;
     }
 
-    .button-container .btn-primary:hover 
+    .btn-primary:hover 
     {
         background-image: linear-gradient(to right, #FF8A33, #FF5733);
         box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         transform: translateY(-2px);
     }
 
-    .button-container .btn-primary:active 
+    .btn-primary:active 
     {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transform: translateY(1px);
     }
 
-    p {
-        margin: 5px 0;
+    .icon-black, .text-black 
+    {
+        color: black;
     }
 </style>

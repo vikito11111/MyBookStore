@@ -1,6 +1,9 @@
-﻿using MyBookStore.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using MyBookStore.Data;
 using MyBookStore.Models;
 using MyBookStore.ViewModels.Admin;
+using MyBookStore.ViewModels.Author;
+using MyBookStore.ViewModels.Books;
 using System.Security.Policy;
 
 namespace MyBookStore.Services.Authors
@@ -16,14 +19,13 @@ namespace MyBookStore.Services.Authors
             _hostingEnvironment = hostingEnvironment;
         }
 
-        public bool AddAuthor(AddAuthorViewModel model, out string errorMessage)
+        public async Task<(bool isSuccess, string errorMessage)> AddAuthorAsync(AddAuthorViewModel model)
         {
             var existingAuthor = _context.Authors.FirstOrDefault(x => x.Name == model.Name);
 
             if (existingAuthor != null)
             {
-                errorMessage = "An author with the same name already exists.";
-                return false;
+                return (false, "An author with the same name already exists.");
             }
 
             try
@@ -47,24 +49,28 @@ namespace MyBookStore.Services.Authors
 
                     using (var fileStream = new FileStream(filePath, FileMode.Create))
                     {
-                        model.Image.CopyToAsync(fileStream);
+                        await model.Image.CopyToAsync(fileStream);
                     }
 
-                    author.Image = "/authors/" + uniqueFileName;
+                    author.Image = "/images/" + uniqueFileName;
                 }
 
                 _context.Authors.Add(author);
                 _context.SaveChanges();
 
-                errorMessage = string.Empty;
-                return true;
+                return (true, string.Empty);
             }
             catch (Exception ex)
             {
-                errorMessage = ex.Message;
-
-                return false;
+                return (false, ex.Message);
             }
+        }
+
+        public async Task<Author> GetAuthorById(int id)
+        {
+            return await _context.Authors
+                .Include(a => a.Books)
+                .FirstOrDefaultAsync(a => a.Id == id);
         }
     }
 }

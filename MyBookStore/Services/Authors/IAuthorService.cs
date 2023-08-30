@@ -1,9 +1,13 @@
-﻿using MyBookStore.ViewModels.Admin;
+﻿using MyBookStore.Models;
+using MyBookStore.ViewModels.Admin;
+using MyBookStore.ViewModels.Author;
 
 namespace MyBookStore.Services.Authors
 {
     public interface IAuthorService
     {
-        bool AddAuthor(AddAuthorViewModel model, out string errorMessage);
+        Task<(bool isSuccess, string errorMessage)> AddAuthorAsync(AddAuthorViewModel model);
+
+        Task<Author> GetAuthorById(int id);
     }
 }

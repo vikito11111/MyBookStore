@@ -47,17 +47,19 @@ namespace MyBookStore.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddAuthor(AddAuthorViewModel model)
+        public async Task<IActionResult> AddAuthor(AddAuthorViewModel model)
         {
             if (ModelState.IsValid)
             {
-                if (_authorService.AddAuthor(model, out string errorMessage))
+                var result = await _authorService.AddAuthorAsync(model);
+
+                if (result.isSuccess)
                 {
                     return RedirectToAction("Index", "Home");
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, errorMessage);
+                    ModelState.AddModelError(string.Empty, result.errorMessage);
                 }
             }
 
@@ -116,17 +118,19 @@ namespace MyBookStore.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddPublisher(AddPublisherViewModel model)
+        public async Task<IActionResult> AddPublisher(AddPublisherViewModel model)
         {
             if (ModelState.IsValid)
             {
-                if (_publisherService.AddPublisher(model, out string errorMessage))
+                var result = await _publisherService.AddPublisherAsync(model);
+
+                if (result.isSuccess)
                 {
                     return RedirectToAction("Index", "Home");
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, errorMessage);
+                    ModelState.AddModelError(string.Empty, result.errorMessage);
                 }
             }
 
